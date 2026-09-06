@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Intelligent Wealth Blueprint | ExtrasalaryDotcom</title>
+    <meta name="description" content="एक्टिव इनकम से पैसिव दौलत बनाने का वैज्ञानिक तरीका। शेयर बाजार में बिना सट्टेबाजी 15-20% CAGR वेल्थ बनाएं।">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-card: #1e293b;
+            --bg-card-hover: #273549;
+            --accent-green: #22c55e;
+            --accent-green-hover: #16a34a;
+            --accent-gold: #f59e0b;
+            --accent-red: #ef4444;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #22c55e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-text {
+            color: var(--accent-gold);
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: var(--accent-green);
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Buttons */
+        .cta-btn {
+            display: inline-block;
+            width: 100%;
+            max-width: 450px;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 18px 32px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 30px -10px rgba(34, 197, 94, 0.6);
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+        }
+
+        .cta-subtext {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 90px 0 70px 0;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(34, 197, 94, 0.15) 0%, rgba(11, 15, 25, 0) 70%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p.sub-headline {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto 35px auto;
+        }
+
+        .hero-banner-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 850px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+        }
+
+        .stat-box .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .problem-card {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .problem-card h3 {
+            color: #fca5a5;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .problem-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Quote Section */
+        .quote-box {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--accent-gold);
+            padding: 25px 30px;
+            border-radius: 0 12px 12px 0;
+            margin: 40px 0;
+            font-style: italic;
+        }
+
+        .quote-box p {
+            font-size: 1.15rem;
+            color: #e2e8f0;
+            margin-bottom: 8px;
+        }
+
+        .quote-box span {
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* Modules Section */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .module-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 30px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+            position: relative;
+        }
+
+        .module-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-green);
+        }
+
+        .module-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .module-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .module-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .module-card ul li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        .module-card ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+            font-size: 0.85rem;
+        }
+
+        /* Audience Section */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .audience-box {
+            padding: 30px;
+            border-radius: 14px;
+        }
+
+        .for-you {
+            background: rgba(34, 197, 94, 0.05);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+        }
+
+        .not-for-you {
+            background: rgba(239, 68, 68, 0.05);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .audience-box h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .for-you h3 { color: var(--accent-green); }
+        .not-for-you h3 { color: #fca5a5; }
+
+        .audience-box ul {
+            list-style: none;
+        }
+
+        .audience-box ul li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        /* Toolkit / Bonus Section */
+        .toolkit-container {
+            background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .tool-item {
+            background: var(--bg-primary);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .tool-item .icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .tool-item h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .tool-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Pricing Card */
+        .pricing-section {
+            text-align: center;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 2px solid var(--accent-green);
+            border-radius: 20px;
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 45px 35px;
+            box-shadow: 0 0 50px rgba(34, 197, 94, 0.15);
+            position: relative;
+        }
+
+        .offer-tag {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-gold);
+            color: #000000;
+            padding: 4px 16px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .price-wrap {
+            margin: 25px 0;
+        }
+
+        .old-price {
+            font-size: 1.4rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+
+        .new-price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Guarantee */
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background: rgba(245, 158, 11, 0.05);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 14px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 40px auto 0 auto;
+        }
+
+        .guarantee-badge {
+            font-size: 3.5rem;
+            line-height: 1;
+        }
+
+        .guarantee-box h3 {
+            color: var(--accent-gold);
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .guarantee-box p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* FAQ */
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: 20px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: "+";
+            font-size: 1.4rem;
+            color: var(--accent-green);
+        }
+
+        .faq-item[open] summary::after {
+            content: "−";
+        }
+
+        .faq-content {
+            padding: 0 20px 20px 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.3);
+            padding-top: 15px;
+        }
+
+        /* Footer Links & Navigation */
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 25px 0 20px 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .footer-nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .footer-nav a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Modals */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(5px);
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: var(--bg-card);
+            margin: 40px auto;
+            padding: 35px;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            max-width: 750px;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--text-muted);
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        .close-modal:hover {
+            color: #ffffff;
+        }
+
+        .modal-body {
+            max-height: 70vh;
+            overflow-y: auto;
+            padding-right: 10px;
+            margin-top: 15px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .modal-body h3 {
+            color: #ffffff;
+            margin: 20px 0 10px 0;
+            font-size: 1.15rem;
+        }
+
+        .modal-body p {
+            margin-bottom: 12px;
+        }
+
+        .modal-body ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Form */
+        .form-group {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-green);
+        }
+
+        /* Footer */
+        footer {
+            padding: 50px 0 30px 0;
+            background: #060911;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .disclaimer-text {
+            font-size: 0.78rem;
+            color: #64748b;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero p.sub-headline { font-size: 1.05rem; }
+            .audience-grid { grid-template-columns: 1fr; }
+            .guarantee-box { flex-direction: column; text-align: center; }
+            .new-price { font-size: 2.8rem; }
+            section { padding: 60px 0; }
+            .modal-content { padding: 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="badge">📘 MASTER INVESTOR EDITION BY EXTRASALARYDOTCOM</div>
+            <h1>एक्टिव इनकम से <span class="gradient-text">पैसिव दौलत</span> बनाने का वैज्ञानिक तरीका</h1>
+            <p class="sub-headline">
+                बिना दिन भर स्क्रीन देखे, बिना टिप्स के जाल में फंसे और बिना सट्टेबाजी किए—वॉरेन बफेट व बेंजामिन ग्राहम के फॉर्मूलों से 15% से 20% CAGR का अपना 'पैसिव वेल्थ इंजन' बनाएं।
+            </p>
+
+            <a href="#pricing" class="cta-btn">ई-बुक तुरंत डाउनलोड करें (PDF) ➔</a>
+            <div class="cta-subtext">
+                <span>⚡ इंस्टेंट एक्सेस</span>
+                <span>🔒 सुरक्षित 256-Bit पेमेंट</span>
+                <span>📄 रेडी-टू-यूज टूलकिट शामिल</span>
+            </div>
+
+            <!-- Highlights Banner -->
+            <div class="hero-banner-card">
+                <div class="stat-box">
+                    <div class="number">15-20%</div>
+                    <div class="label">टारगेट सालाना CAGR</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">70 : 30</div>
+                    <div class="label">कोर-सैटेलाइट वेल्थ मॉडल</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">10-पॉइंट</div>
+                    <div class="label">प्रूवन स्टॉक चेकलिस्ट</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">3R</div>
+                    <div class="label">एग्जिट व प्रॉफिट बुकिंग फ्रेमवर्क</div>
+                </div>
+            </div>
+
+            <div class="quote-box" style="max-width: 850px; margin: 30px auto 0 auto; text-align: left;">
+                <p>"An investment in knowledge pays the best interest."</p>
+                <span>— Benjamin Franklin (ज्ञान में किया गया निवेश ही जीवन भर सबसे बेहतरीन रिटर्न देता है)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- The Problem Section -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>क्या आप भी शेयर बाजार के इस <span class="gold-text">चक्रव्यूह</span> में फंसे हैं?</h2>
+                <p>90% रिटेल निवेशक शेयर बाजार को 'जुआ' मानकर अपनी गाढ़ी कमाई गंवा बैठते हैं क्योंकि वे इन 4 गलतियों के शिकार होते हैं:</p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>❌ टिप्स और सोशल मीडिया हाइप</h3>
+                    <p>टेलीग्राम चैनल्स और रील्स देखकर बिना फंडामेंटल्स जाने स्टॉक खरीदना और फिर 'मजबूर इन्वेस्टर' बन जाना।</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ FOMO और यूफोरिया का जाल</h3>
+                    <p>जब कोई पेनी स्टॉक 50% भाग चुका होता है, तब लालच में आकर टॉप पर खरीदारी करना और लोअर सर्किट में फंसना।</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ पैनिक सेलिंग (Panic Selling)</h3>
+                    <p>बाजार में 15-20% की सामान्य गिरावट आते ही घबराकर भारी नुकसान में अच्छे शेयर्स भी कौड़ियों के भाव बेच देना।</p>
+                </div>
+                <div class="problem-card">
+                    <h3>❌ कागजी मुनाफा बनाम फर्जी कैश</h3>
+                    <p>सिर्फ कंपनी का नेट प्रॉफिट देखना, लेकिन यह न समझना कि कंपनी पर कर्ज कितना है और फ्री कैश फ्लो (FCF) पॉजिटिव है या नहीं।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Solution Section -->
+    <section style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge" style="background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); color: var(--accent-gold);">समाधान</div>
+                <h2>The Intelligent Wealth Blueprint क्यों अलग है?</h2>
+                <p>यह ई-बुक आपको फुल-टाइम स्क्रीन से चिपका रहने वाला ट्रेडर नहीं बनाती, बल्कि एक अनुशासित बिजनेस ओनर बनाती है।</p>
+            </div>
+
+            <div class="quote-box">
+                <p>"The individual investor should act consistently as an investor and not as a speculator."</p>
+                <span>— Benjamin Graham (The Father of Value Investing)</span>
+            </div>
+
+            <p style="font-size: 1.1rem; color: var(--text-muted); text-align: center; max-width: 800px; margin: 0 auto;">
+                यह गाइड आपकी <strong>एक्टिव इनकम (जॉब/बिजनेस)</strong> से आने वाले पैसे को एक ऐसे <strong>पैसिव वेल्थ इंजन</strong> में बदलने का रोडमैप है, जो आपके सोते समय भी चक्रवृद्धि (कंपाउंडिंग) ब्याज की ताकत से बढ़ता रहता है।
+            </p>
+        </div>
+    </section>
+
+    <!-- What's Inside / Modules -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>ई-बुक के अंदर क्या सीखेंगें? (Curriculum)</h2>
+                <p>दुनिया के महानतम निवेशकों (ग्राहम, बफेट, मंगर, लिंच) के बुनियादी सिद्धांतों का भारतीय बाजार के संदर्भ में प्रैक्टिकल संकलन:</p>
+            </div>
+
+            <div class="module-grid">
+                <!-- Module 1 -->
+                <div class="module-card">
+                    <span class="module-tag">मॉड्यूल 1</span>
+                    <h3>इन्वेस्टर साइकोलॉजी और मिस्टर मार्केट</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">सट्टेबाजी (Speculation) और सच्चे निवेश का असली फर्क समझें।</p>
+                    <ul>
+                        <li>बेंजामिन ग्राहम का 'मिस्टर मार्केट' साइकोलॉजी नियम</li>
+                        <li>FOMO और यूफोरिया से बचने का 48-Hour कूलिंग रूल</li>
+                        <li>वोलैटिलिटी और नोशनल लॉस का मानसिक सच</li>
+                    </ul>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="module-card">
+                    <span class="module-tag">मॉड्यूल 2</span>
+                    <h3>इंट्रिन्सिक वैल्यू और 'मार्जिन ऑफ सेफ्टी'</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">सस्ता और महंगा शेयर पहचानने का वैज्ञानिक तरीका।</p>
+                    <ul>
+                        <li>Price vs Value: ₹20 का पेनी स्टॉक सस्ता क्यों नहीं होता?</li>
+                        <li>30% मार्जिन ऑफ सेफ्टी के साथ डाउनसाइड रिस्क जीरो करना</li>
+                        <li>4-स्टेप वैल्यूएशन स्कैन (P/E, ROCE, FCF, D/E)</li>
+                    </ul>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="module-card">
+                    <span class="module-tag">मॉड्यूल 3</span>
+                    <h3>इकोनॉमिक मोएट और कैश फ्लो का सच</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">ऐसी मोनोपॉली कंपनियां चुनें जिनके मुनाफे पर कोई डाका न डाल सके।</p>
+                    <ul>
+                        <li>मोएट के 5 प्रकार (ब्रांड, नेटवर्क इफेक्ट, स्विचिंग कॉस्ट)</li>
+                        <li>प्राइजिंग पावर: बफेट का सबसे पसंदीदा पैमाना</li>
+                        <li>बैलेंस शीट के 4 बड़े रेड फ्लैग्स और CFO/PAT रेश्यो</li>
+                    </ul>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="module-card">
+                    <span class="module-tag">मॉड्यूल 4</span>
+                    <h3>70:30 कोर और सैटेलाइट पोर्टफोलियो</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">बिना ज्यादा रिस्क लिए इंडेक्स को आउटपरफॉर्म करने का मॉडल।</p>
+                    <ul>
+                        <li>70% कोर (ब्लूचिप/गोल्ड) + 30% सैटेलाइट (हाई-ग्रोथ)</li>
+                        <li>10% सिंगल स्टॉक और 25% सेक्टर एलोकेशन लिमिट</li>
+                        <li>मार्केट साइकिल्स के 4 चरण और 5% रीबैलेंसिंग थ्रेशोल्ड</li>
+                    </ul>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="module-card">
+                    <span class="module-tag">मॉड्यूल 5</span>
+                    <h3>प्रॉफिट बुकिंग और 3R एग्जिट फ्रेमवर्क</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">"कब बेचना है?"—शेयर बाजार का सबसे कठिन सवाल अब आसान।</p>
+                    <ul>
+                        <li>3R रूल्स: थीसिस ब्रेक, इनसेन वैल्यूएशन, बेहतर अवसर</li>
+                        <li>प्रिंसिपल रिकवरी मॉडल (Risk-Free House Money स्ट्रेटेजी)</li>
+                        <li>खरपतवार को काटना और फूलों को सींचना सीखें</li>
+                    </ul>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="module-card">
+                    <span class="module-tag">विशेष अध्याय</span>
+                    <h3>इंडियन टैक्स और चार्जेंस का पूरा सच</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">अपने मुनाफे को टैक्स और छिपे हुए शुल्कों से सुरक्षित रखें।</p>
+                    <ul>
+                        <li>इक्विटी, डेट, FD, गोल्ड, रियल एस्टेट व क्रिप्टो पर टैक्स नियम</li>
+                        <li>STCG (20%), LTCG (12.5%) व ₹1.25 लाख टैक्स छूट</li>
+                        <li>STT, स्टैंप ड्यूटी, GST और TDS बचाने के तरीके (15G/15H)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toolkit / Action Sheets -->
+    <section style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="toolkit-container">
+                <div style="text-align: center; max-width: 650px; margin: 0 auto 30px auto;">
+                    <div class="badge">ACTION TOOLKIT INCLUDED</div>
+                    <h2>साथ में पाएं Extrasalary रेडी-टू-यूज टूल्स</h2>
+                    <p style="color: var(--text-muted);">सिर्फ थ्योरी नहीं, तुरंत अमल करने के लिए प्रैक्टिकल फ्रेमवर्क और शीट्स:</p>
+                </div>
+
+                <div class="tools-list">
+                    <div class="tool-item">
+                        <div class="icon">📋</div>
+                        <h4>10-पॉइंट स्टॉक स्कोरकार्ड</h4>
+                        <p>किसी भी शेयर को 2 मिनट में 0 से 10 के स्केल पर रेट करें।</p>
+                    </div>
+                    <div class="tool-item">
+                        <div class="icon">📈</div>
+                        <h4>कम्पाउंडिंग प्रोजेक्शन टेबल्स</h4>
+                        <p>15% CAGR पर 10, 15 और 20 साल का वेल्थ प्लान।</p>
+                    </div>
+                    <div class="tool-item">
+                        <div class="icon">📔</div>
+                        <h4>इन्वेस्टर जर्नल टेम्पलेट</h4>
+                        <p>अपने निवेश के फैसले और थीसिस को ट्रैक करने का फॉर्मूला।</p>
+                    </div>
+                    <div class="tool-item">
+                        <div class="icon">⚖️</div>
+                        <h4>सालाना रीबैलेंसिंग वर्कशीट</h4>
+                        <p>अपने एसेट एलोकेशन को हर साल बिना भावनाओं के रीसेट करें।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Is This For -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>क्या यह मास्टर गाइड आपके लिए है?</h2>
+                <p>हमारा लक्ष्य साफ है—हम केवल गंभीर और लॉन्ग-टर्म वेल्थ बनाने वाले पाठकों की मदद करते हैं।</p>
+            </div>
+
+            <div class="audience-grid">
+                <div class="audience-box for-you">
+                    <h3>✅ यह ई-बुक आपके लिए बिल्कुल परफेक्ट है अगर:</h3>
+                    <ul>
+                        <li><span>✔</span> आप नौकरी या बिजनेस में हैं और अपनी एक्टिव कमाई को ऑटो-पायलट वेल्थ में बदलना चाहते हैं।</li>
+                        <li><span>✔</span> आप सोशल मीडिया टिप्स और शोर से तंग आ चुके हैं और फंडामेंटल तरीके से सीखना चाहते हैं।</li>
+                        <li><span>✔</span> आप अगले 5-10 साल में 15% से 20% CAGR की दर से कंपाउंडिंग वेल्थ कॉर्पस बनाना चाहते हैं।</li>
+                        <li><span>✔</span> आप बैलेंस शीट, कैश फ्लो और मोएट की असली ताकत को सरल हिंदी में समझना चाहते हैं।</li>
+                    </ul>
+                </div>
+
+                <div class="audience-box not-for-you">
+                    <h3>❌ कृपया यह ई-बुक न खरीदें अगर:</h3>
+                    <ul>
+                        <li><span>✖</span> आप '1 महीने में पैसा डबल' करने वाली किसी जादुई स्कीम या सट्टे की तलाश में हैं।</li>
+                        <li><span>✖</span> आप बिना सीखे केवल रेडीमेड कॉल/टिप्स के लिए टेलीग्राम ढूंढ रहे हैं।</li>
+                        <li><span>✖</span> आप इंट्राडे गैंबलिंग या लीवरेज लेकर जोखिम भरा सट्टा खेलना चाहते हैं।</li>
+                        <li><span>✖</span> आप 15-20 मिनट भी बिजनेस की रिपोर्ट पढ़ने के लिए नहीं निकाल सकते।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge">सीमित समय के लिए स्पेशल ऑफर</div>
+                <h2>अपनी वित्तीय स्वतंत्रता की शुरुआत आज ही करें</h2>
+                <p>एक बार का छोटा सा निवेश, जो जीवन भर आपकी पूंजी की रक्षा करेगा।</p>
+            </div>
+
+            <div class="pricing-card">
+                <div class="offer-tag">MASTER EDITION - 80% OFF</div>
+                <h3 style="font-size: 1.5rem; margin-top: 10px;">The Intelligent Wealth Blueprint</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">(कंप्लीट ई-बुक + 4 एक्शन शीट्स + टैक्स मास्टरक्लास)</p>
+
+                <div class="price-wrap">
+                    <span class="old-price">₹1,999</span>
+                    <span class="new-price">₹399</span>
+                </div>
+
+                <ul class="pricing-features">
+                    <li><span>✔</span> पूरी ई-बुक (हाई-क्वालिटी प्रिंटेबल PDF फॉर्मेट)</li>
+                    <li><span>✔</span> 10-पॉइंट स्टॉक स्क्रीनिंग स्कोरकार्ड चेकलिस्ट</li>
+                    <li><span>✔</span> 70:30 कोर और सैटेलाइट एलोकेशन गाइड</li>
+                    <li><span>✔</span> 3R प्रॉफिट बुकिंग और एग्जिट फ्रेमवर्क</li>
+                    <li><span>✔</span> 2026 अपडेटेड सरकारी टैक्स, STT व TDS कम्प्लीट गाइड</li>
+                    <li><span>✔</span> 20 जरूरी फाइनेंशियल टर्म्स की शब्दावली (Glossary)</li>
+                </ul>
+
+                <button class="cta-btn" style="max-width: 100%;">ई-बुक तुरंत डाउनलोड करें ➔</button>
+                <div class="cta-subtext" style="margin-top: 15px;">
+                    <span>🔒 100% सुरक्षित पेमेंट</span>
+                    <span>📥 तुरंत ईमेल पर डिलीवरी</span>
+                </div>
+            </div>
+
+            <!-- Guarantee -->
+            <div class="guarantee-box">
+                <div class="guarantee-badge">🛡️</div>
+                <div style="text-align: left;">
+                    <h3>100% वैल्यू और नॉलेज गारंटी</h3>
+                    <p>यदि इस ई-बुक को पूरा पढ़ने के बाद आपको यह न लगे कि आपके शेयर चुनने और वेल्थ बनाने के नजरिए में 180-डिग्री का सकारात्मक बदलाव आया है, तो यह हमारा वादा है कि आपको दी गई जानकारी भारत के किसी भी सामान्य कोर्स से कहीं अधिक व्यावहारिक साबित होगी।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header">
+                <h2>अक्सर पूछे जाने वाले सवाल (FAQ)</h2>
+                <p>खरीदने से पहले आपके मन में जो भी सवाल हों, उनके पारदर्शी जवाब:</p>
+            </div>
+
+            <div class="faq-accordion">
+                <details class="faq-item" open>
+                    <summary>मुझे ई-बुक का एक्सेस कैसे मिलेगा?</summary>
+                    <div class="faq-content">
+                        पेमेंट पूरा होते ही आपको तुरंत स्क्रीन पर डाउनलोड लिंक मिल जाएगा और साथ ही आपके दिए गए ईमेल पते पर भी पूरी PDF फाइल भेज दी जाएगी। आप इसे मोबाइल, टैबलेट या लैपटॉप पर कभी भी पढ़ सकते हैं।
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>क्या यह किताब शुरुआत करने वाले (Beginners) के लिए सही है?</summary>
+                    <div class="faq-content">
+                        बिल्कुल! इस किताब को बहुत ही सरल, बातचीत वाली हिंदी भाषा में लिखा गया है। इंट्रिन्सिक वैल्यू, मोएट, बैलेंस शीट और ROCE जैसे जटिल विषयों को व्यावहारिक उदाहरणों के साथ समझाया गया है।
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>क्या इसमें स्टॉक टिप्स या रिकमेंडेशन दी गई हैं?</summary>
+                    <div class="faq-content">
+                        नहीं। यह कोई टिप्स या सट्टा सर्विस नहीं है। यह ई-बुक आपको एक '10-पॉइंट स्टॉक स्क्रीनिंग स्कोरकार्ड' सिखाती है जिससे आप खुद बेहतरीन और कर्ज-मुक्त मल्टीबैगर बिजनेस ढूंढने में सक्षम हो सकें।
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>क्या इसमें 2026 के नए टैक्स नियमों की जानकारी है?</summary>
+                    <div class="faq-content">
+                        हाँ, विशेष अध्याय में इक्विटी (STCG 20%, LTCG 12.5%), डेट फंड्स, FD, फिजिकल/डिजिटल गोल्ड, रियल एस्टेट और क्रिप्टोकरेंसी पर लगने वाले सभी नवीनतम टैक्स, सेस, STT और TDS नियमों को विस्तृत उदाहरणों के साथ समझाया गया है।
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Footer Navigation Links -->
+            <div class="footer-nav">
+                <a onclick="openModal('privacyModal')">Privacy Policy</a>
+                <a onclick="openModal('termsModal')">Terms & Conditions</a>
+                <a onclick="openModal('refundModal')">Refund Policy</a>
+                <a onclick="openModal('contactModal')">Contact Us</a>
+            </div>
+
+            <p><strong>The Intelligent Wealth Blueprint</strong> | प्रस्तुतकर्ता: <strong>ExtrasalaryDotcom</strong></p>
+            <p class="disclaimer-text">
+                <strong>महत्वपूर्ण डिस्क्लेमर (Disclaimer):</strong> इस ई-बुक और वेबपेज में दी गई सभी जानकारी, केस स्टडीज़ और टूल्स केवल वित्तीय साक्षरता और शैक्षिक (Educational) उद्देश्य के लिए हैं। इसे किसी भी प्रकार की वित्तीय, कानूनी या निवेश सलाह न माना जाए। ExtrasalaryDotcom या इसके लेखक SEBI रजिस्टर्ड सलाहकार नहीं हैं। शेयर बाजार और म्यूचुअल फंड्स में निवेश बाजार जोखिमों के अधीन है। किसी भी एसेट क्लास में पूंजी लगाने से पहले अपनी खुद की रिसर्च (DYOR) जरूर करें या किसी सर्टिफाइड एडवाइजर से परामर्श लें।
+            </p>
+            <p style="margin-top: 25px; color: #475569;">© 2026 ExtrasalaryDotcom. सर्वाधिकार सुरक्षित।</p>
+        </div>
+    </footer>
+
+    <!-- Modals (Privacy, Terms, Refund, Contact) -->
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
+            <h2>Privacy Policy (गोपनीयता नीति)</h2>
+            <div class="modal-body">
+                <p>ExtrasalaryDotcom पर हम आपकी गोपनीयता का पूरा सम्मान करते हैं। यह प्राइवेसी पॉलिसी बताती है कि जब आप हमारी वेबसाइट और डिजिटल प्रोडक्ट्स का उपयोग करते हैं, तो हम आपकी जानकारी को कैसे सुरक्षित रखते हैं।</p>
+                
+                <h3>1. एकत्रित की जाने वाली जानकारी</h3>
+                <p>जब आप हमारी ई-बुक खरीदते हैं, तो हम केवल आवश्यक बुनियादी जानकारी जैसे आपका नाम, ईमेल आईडी और संपर्क विवरण एकत्रित करते हैं ताकि आपको डिजिटल प्रोडक्ट डिलीवर किया जा सके।</p>
+
+                <h3>2. डेटा सुरक्षा</h3>
+                <p>आपकी भुगतान जानकारी (Payment Data) पूरी तरह से सुरक्षित 256-Bit एन्क्रिप्टेड पेमेंट गेटवे द्वारा प्रोसेस की जाती है। हम आपकी कोई भी बैंकिंग या कार्ड जानकारी हमारे सर्वर पर स्टोर नहीं करते।</p>
+
+                <h3>3. डेटा शेयरिंग</h3>
+                <p>हम आपकी व्यक्तिगत जानकारी किसी भी तीसरे पक्ष (Third Party) को न तो बेचते हैं और न ही किराए पर देते हैं।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms and Conditions Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
+            <h2>Terms & Conditions (नियम और शर्तें)</h2>
+            <div class="modal-body">
+                <p>इस वेबसाइट या ई-बुक का उपयोग करने से पहले कृपया निम्नलिखित नियमों और शर्तों को ध्यानपूर्वक पढ़ें:</p>
+
+                <h3>1. बौद्धिक संपदा (Intellectual Property)</h3>
+                <p>The Intelligent Wealth Blueprint ई-बुक और इसकी संपूर्ण सामग्री ExtrasalaryDotcom की कॉपीराइट सामग्री है। इसे बिना लिखित अनुमति के पुनः बेचना, सार्वजनिक रूप से साझा करना, टेलीग्राम या सोशल मीडिया पर वितरित करना कानूनी रूप से प्रतिबंधित है।</p>
+
+                <h3>2. केवल शैक्षिक उद्देश्य (Educational Purpose Only)</h3>
+                <p>इस गाइड में दी गई सभी केस स्टडीज, रणनीतियां और फॉर्मूले केवल शैक्षिक और वित्तीय साक्षरता के उद्देश्य से हैं। यह कोई प्रत्यक्ष खरीद/बिक्री की सलाह (Buy/Sell Recommendation) नहीं है।</p>
+
+                <h3>3. वित्तीय निर्णय और जोखिम</h3>
+                <p>शेयर बाजार में निवेश बाजार जोखिमों के अधीन है। किसी भी वित्तीय लाभ या हानि के लिए पाठक स्वयं जिम्मेदार होंगे।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Refund Policy Modal -->
+    <div id="refundModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('refundModal')">&times;</span>
+            <h2>Refund Policy (रिफंड नीति)</h2>
+            <div class="modal-body">
+                <p>हमारे डिजिटल उत्पादों के लिए हमारी रिफंड और कैंसलेशन नीति स्पष्ट और पारदर्शी है:</p>
+
+                <h3>1. डिजिटल डाउनलोड्स की प्रकृति</h3>
+                <p>चूंकि "The Intelligent Wealth Blueprint" एक तुरंत डाउनलोड करने योग्य डिजिटल उत्पाद (PDF & E-Book) है जिसे पेमेंट के तुरंत बाद एक्सेस किया जा सकता है, इसलिए सामान्यतः खरीदारी के बाद <strong>रिफंड उपलब्ध नहीं है</strong>।</p>
+
+                <h3>2. तकनीकी समस्याएं</h3>
+                <p>यदि पेमेंट कटने के बाद भी आपको ई-बुक का डाउनलोड लिंक या ईमेल प्राप्त नहीं होता है, तो कृपया अपने पेमेंट ट्रांजैक्शन आईडी के साथ हमें संपर्क करें। हमारी टीम 24 घंटे के भीतर आपको फाइल मैन्युअली ईमेल पर उपलब्ध कराएगी।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
+            <h2>Contact Us (संपर्क करें)</h2>
+            <div class="modal-body">
+                <p>यदि आपके पास ई-बुक, पेमेंट या एक्सेस से संबंधित कोई प्रश्न है, तो आप नीचे दिए गए विवरण या फॉर्म के माध्यम से हमसे संपर्क कर सकते हैं:</p>
+                
+                <p style="margin: 15px 0;"><strong>📧 ईमेल:</strong> supportextrasalarydot@gmail.com</p>
+                <p style="margin: 15px 0;"><strong>🌐 वेबसाइट:</strong> https://extrasalarydotcom.blogspot.com/</p>
+
+                <form onsubmit="event.preventDefault(); alert('धन्यवाद! आपका संदेश प्राप्त हो गया है। हम जल्द ही आपसे संपर्क करेंगे।'); closeModal('contactModal');" style="margin-top: 25px;">
+                    <div class="form-group">
+                        <label>आपका नाम</label>
+                        <input type="text" class="form-control" placeholder="अपना पूरा नाम दर्ज करें" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ईमेल पता</label>
+                        <input type="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>आपका संदेश / प्रश्न</label>
+                        <textarea class="form-control" rows="4" placeholder="अपना प्रश्न यहाँ लिखें..." required></textarea>
+                    </div>
+                    <button type="submit" class="cta-btn" style="max-width: 100%; padding: 12px; font-size: 1rem;">संदेश भेजें</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal when clicking outside content
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    document.body.style.overflow = "auto";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
