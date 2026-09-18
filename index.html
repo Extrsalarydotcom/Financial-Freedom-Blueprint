@@ -668,6 +668,24 @@
             .modal-content { padding: 25px 20px; }
         }
     </style>
+    <style>
+body {
+    -webkit-touch-callout: none; /* मोबाइल ब्राउज़र का पॉपअप मेनू ब्लॉक करता है */
+    -webkit-user-select: none;   /* सफारी और क्रोम में सिलेक्शन बंद */
+    -moz-user-select: none;      /* फ़ायरफ़ॉक्स */
+    -ms-user-select: none;       /* एज */
+    user-select: none;           /* स्टैंडर्ड */
+}
+
+/* सर्च बॉक्स चालू रखने के लिए ताकि लोग सर्च कर सकें */
+input, textarea {
+    -webkit-touch-callout: default !important;
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+}
+</style>
 </head>
 <body>
 
@@ -1133,6 +1151,55 @@
             });
         }
     </script>
+// राइट-क्लिक और मोबाइल लॉन्ग-प्रेस मेनू ब्लॉक
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        return false;
+    }
+});
 
+// कॉपी और कट ब्लॉक
+document.addEventListener('copy', function(e) {
+    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+document.addEventListener('cut', function(e) {
+    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// ड्रैग करके टेक्स्ट सिलेक्ट करना रोकना
+document.addEventListener('dragstart', function(e) {
+    if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// कीबोर्ड शॉर्टकट ब्लॉक (Ctrl+C, Ctrl+U, F12 आदि)
+document.addEventListener('keydown', function(e) {
+    const isInput = e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA';
+    if (e.key === 'F12') {
+        e.preventDefault();
+        return false;
+    }
+    if (e.ctrlKey || e.metaKey) {
+        switch (e.key.toLowerCase()) {
+            case 'c':
+            case 'u':
+            case 's':
+            case 'p':
+            case 'a':
+                if (!isInput) e.preventDefault();
+                break;
+        }
+    }
+});
 </body>
 </html>
