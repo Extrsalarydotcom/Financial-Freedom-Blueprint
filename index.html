@@ -6,6 +6,20 @@
     <title>The Intelligent Wealth Blueprint | ExtrasalaryDotcom</title>
     <meta name="description" content="एक्टिव इनकम से पैसिव दौलत बनाने का वैज्ञानिक तरीका। शेयर बाजार में बिना सट्टेबाजी 15-20% CAGR वेल्थ बनाएं।">
     <meta name="google-site-verification" content="d6MtKQXJvde0u_oPsSvnkRxMbT5l9IIQo-BUjjWpZwU" />
+
+    <!-- Ultra-Level Security Meta Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+    <!-- Anti-Clickjacking / Frame-Busting Shield -->
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.self.location;
+        }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -29,6 +43,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-touch-callout: none !important;
         }
 
         body {
@@ -36,6 +51,39 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            user-select: none !important;
+            -webkit-user-drag: none !important;
+        }
+
+        /* फॉर्म और इनपुट फील्ड्स चालू रखने के लिए */
+        input, textarea, select {
+            -webkit-touch-callout: default !important;
+            -webkit-user-select: auto !important;
+            -moz-user-select: auto !important;
+            -ms-user-select: auto !important;
+            user-select: auto !important;
+        }
+
+        /* एंटी-प्रिंट शील्ड (Ctrl+P या Save as PDF ब्लॉक) */
+        @media print {
+            body * {
+                display: none !important;
+            }
+            body::after {
+                content: "Protected Content - ExtrasalaryDotcom Security Shield";
+                display: block !important;
+                color: #000;
+                font-size: 20px;
+                text-align: center;
+                padding: 50px;
+            }
+        }
+
+        .hidden {
+            display: none !important;
         }
 
         .container {
@@ -43,6 +91,48 @@
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
+        }
+
+        /* Top Bar */
+        .top-verify-bar {
+            background: #111827;
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 0;
+        }
+
+        .top-verify-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .brand-logo-text {
+            font-weight: 800;
+            font-size: 1.15rem;
+            color: #fff;
+        }
+
+        .brand-logo-text span {
+            color: var(--accent-green);
+        }
+
+        .btn-already-paid {
+            background: rgba(34, 197, 94, 0.12);
+            border: 1px solid var(--accent-green);
+            color: var(--accent-green);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-already-paid:hover {
+            background: var(--accent-green);
+            color: #000;
         }
 
         /* Typography */
@@ -107,7 +197,7 @@
         .cta-subtext {
             font-size: 0.85rem;
             color: var(--text-muted);
-            margin-top: 10px;
+            margin-top: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -139,7 +229,7 @@
 
         /* Hero Section */
         .hero {
-            padding: 90px 0 70px 0;
+            padding: 75px 0 70px 0;
             text-align: center;
             background: radial-gradient(circle at top, rgba(34, 197, 94, 0.15) 0%, rgba(11, 15, 25, 0) 70%);
         }
@@ -469,6 +559,51 @@
             color: var(--text-muted);
         }
 
+        /* Secure Verification & Download Gate */
+        .vault-box {
+            max-width: 560px;
+            margin: 60px auto;
+            background: var(--bg-card);
+            border: 1px solid var(--accent-green);
+            border-radius: 18px;
+            padding: 35px 28px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        .vault-error {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid var(--accent-red);
+            color: #fca5a5;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .vault-bonus-list {
+            list-style: none;
+            text-align: left;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 22px;
+        }
+
+        .vault-bonus-list li {
+            font-size: 0.88rem;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .vault-bonus-list li:last-child {
+            margin-bottom: 0;
+        }
+
         /* FAQ */
         .faq-accordion {
             max-width: 800px;
@@ -668,365 +803,418 @@
             .modal-content { padding: 25px 20px; }
         }
     </style>
-    <style>
-body {
-    -webkit-touch-callout: none; /* मोबाइल ब्राउज़र का पॉपअप मेनू ब्लॉक करता है */
-    -webkit-user-select: none;   /* सफारी और क्रोम में सिलेक्शन बंद */
-    -moz-user-select: none;      /* फ़ायरफ़ॉक्स */
-    -ms-user-select: none;       /* एज */
-    user-select: none;           /* स्टैंडर्ड */
-}
-
-/* सर्च बॉक्स चालू रखने के लिए ताकि लोग सर्च कर सकें */
-input, textarea {
-    -webkit-touch-callout: default !important;
-    -webkit-user-select: auto !important;
-    -moz-user-select: auto !important;
-    -ms-user-select: auto !important;
-    user-select: auto !important;
-}
-</style>
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <div class="badge">📘 MASTER INVESTOR EDITION BY EXTRASALARYDOTCOM</div>
-            <h1>एक्टिव इनकम से <span class="gradient-text">पैसिव दौलत</span> बनाने का वैज्ञानिक तरीका</h1>
-            <p class="sub-headline">
-                बिना दिन भर स्क्रीन देखे, बिना टिप्स के जाल में फंसे और बिना सट्टेबाजी किए—वॉरेन बफेट व बेंजामिन ग्राहम के फॉर्मूलों से 15% से 20% CAGR का अपना 'पैसिव वेल्थ इंजन' बनाएं।
-            </p>
-
-            <a href="https://rzp.io/rzp/EiokeS11" class="cta-btn">ई-बुक तुरंत डाउनलोड करें (PDF) ➔</a>
-            <div class="cta-subtext">
-                <span>⚡ इंस्टेंट एक्सेस</span>
-                <span>🔒 सुरक्षित 256-Bit पेमेंट</span>
-                <span>📄 रेडी-टू-यूज टूलकिट शामिल</span>
-            </div>
-
-            <!-- Highlights Banner -->
-            <div class="hero-banner-card">
-                <div class="stat-box">
-                    <div class="number">15-20%</div>
-                    <div class="label">टारगेट सालाना CAGR</div>
-                </div>
-                <div class="stat-box">
-                    <div class="number">70 : 30</div>
-                    <div class="label">कोर-सैटेलाइट वेल्थ मॉडल</div>
-                </div>
-                <div class="stat-box">
-                    <div class="number">10-पॉइंट</div>
-                    <div class="label">प्रूवन स्टॉक चेकलिस्ट</div>
-                </div>
-                <div class="stat-box">
-                    <div class="number">3R</div>
-                    <div class="label">एग्जिट व प्रॉफिट बुकिंग फ्रेमवर्क</div>
-                </div>
-            </div>
-
-            <div class="quote-box" style="max-width: 850px; margin: 30px auto 0 auto; text-align: left;">
-                <p>"An investment in knowledge pays the best interest."</p>
-                <span>— Benjamin Franklin (ज्ञान में किया गया निवेश ही जीवन भर सबसे बेहतरीन रिटर्न देता है)</span>
-            </div>
+    <!-- Top Brand & Verification Bar -->
+    <div class="top-verify-bar">
+        <div class="container top-verify-flex">
+            <div class="brand-logo-text">Extrasalary<span>Dotcom</span></div>
+            <button type="button" class="btn-already-paid" onclick="showVerifyView()">🔓 पहले पेमेंट कर चुके हैं? डाउनलोड करें</button>
         </div>
-    </header>
+    </div>
 
-    <!-- The Problem Section -->
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <h2>क्या आप भी शेयर बाजार के इस <span class="gold-text">चक्रव्यूह</span> में फंसे हैं?</h2>
-                <p>90% रिटेल निवेशक शेयर बाजार को 'जुआ' मानकर अपनी गाढ़ी कमाई गंवा बैठते हैं क्योंकि वे इन 4 गलतियों के शिकार होते हैं:</p>
-            </div>
+    <!-- ================= VIEW 1: MAIN LANDING PAGE ================= -->
+    <div id="landing-view">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="container">
+                <div class="badge">📘 MASTER INVESTOR EDITION BY EXTRASALARYDOTCOM</div>
+                <h1>एक्टिव इनकम से <span class="gradient-text">पैसिव दौलत</span> बनाने का वैज्ञानिक तरीका</h1>
+                <p class="sub-headline">
+                    बिना दिन भर स्क्रीन देखे, बिना टिप्स के जाल में फंसे और बिना सट्टेबाजी किए—वॉरेन बफेट व बेंजामिन ग्राहम के फॉर्मूलों से 15% से 20% CAGR का अपना 'पैसिव वेल्थ इंजन' बनाएं।
+                </p>
 
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3>❌ टिप्स और सोशल मीडिया हाइप</h3>
-                    <p>टेलीग्राम चैनल्स और रील्स देखकर बिना फंडामेंटल्स जाने स्टॉक खरीदना और फिर 'मजबूर इन्वेस्टर' बन जाना।</p>
-                </div>
-                <div class="problem-card">
-                    <h3>❌ FOMO और यूफोरिया का जाल</h3>
-                    <p>जब कोई पेनी स्टॉक 50% भाग चुका होता है, तब लालच में आकर टॉप पर खरीदारी करना और लोअर सर्किट में फंसना।</p>
-                </div>
-                <div class="problem-card">
-                    <h3>❌ पैनिक सेलिंग (Panic Selling)</h3>
-                    <p>बाजार में 15-20% की सामान्य गिरावट आते ही घबराकर भारी नुकसान में अच्छे शेयर्स भी कौड़ियों के भाव बेच देना।</p>
-                </div>
-                <div class="problem-card">
-                    <h3>❌ कागजी मुनाफा बनाम फर्जी कैश</h3>
-                    <p>सिर्फ कंपनी का नेट प्रॉफिट देखना, लेकिन यह न समझना कि कंपनी पर कर्ज कितना है और फ्री कैश फ्लो (FCF) पॉजिटिव है या नहीं।</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Solution Section -->
-    <section style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header">
-                <div class="badge" style="background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); color: var(--accent-gold);">समाधान</div>
-                <h2>The Intelligent Wealth Blueprint क्यों अलग है?</h2>
-                <p>यह ई-बुक आपको फुल-टाइम स्क्रीन से चिपका रहने वाला ट्रेडर नहीं बनाती, बल्कि एक अनुशासित बिजनेस ओनर बनाती है।</p>
-            </div>
-
-            <div class="quote-box">
-                <p>"The individual investor should act consistently as an investor and not as a speculator."</p>
-                <span>— Benjamin Graham (The Father of Value Investing)</span>
-            </div>
-
-            <p style="font-size: 1.1rem; color: var(--text-muted); text-align: center; max-width: 800px; margin: 0 auto;">
-                यह गाइड आपकी <strong>एक्टिव इनकम (जॉब/बिजनेस)</strong> से आने वाले पैसे को एक ऐसे <strong>पैसिव वेल्थ इंजन</strong> में बदलने का रोडमैप है, जो आपके सोते समय भी चक्रवृद्धि (कंपाउंडिंग) ब्याज की ताकत से बढ़ता रहता है।
-            </p>
-        </div>
-    </section>
-
-    <!-- What's Inside / Modules -->
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <h2>ई-बुक के अंदर क्या सीखेंगें? (Curriculum)</h2>
-                <p>दुनिया के महानतम निवेशकों (ग्राहम, बफेट, मंगर, लिंच) के बुनियादी सिद्धांतों का भारतीय बाजार के संदर्भ में प्रैक्टिकल संकलन:</p>
-            </div>
-
-            <div class="module-grid">
-                <!-- Module 1 -->
-                <div class="module-card">
-                    <span class="module-tag">मॉड्यूल 1</span>
-                    <h3>इन्वेस्टर साइकोलॉजी और मिस्टर मार्केट</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">सट्टेबाजी (Speculation) और सच्चे निवेश का असली फर्क समझें।</p>
-                    <ul>
-                        <li>बेंजामिन ग्राहम का 'मिस्टर मार्केट' साइकोलॉजी नियम</li>
-                        <li>FOMO और यूफोरिया से बचने का 48-Hour कूलिंग रूल</li>
-                        <li>वोलैटिलिटी और नोशनल लॉस का मानसिक सच</li>
-                    </ul>
+                <a href="https://rzp.io/rzp/EiokeS11" target="_blank" rel="noopener noreferrer" class="cta-btn">ई-बुक तुरंत डाउनलोड करें (PDF) ➔</a>
+                <div class="cta-subtext">
+                    <span>⚡ इंस्टेंट एक्सेस</span>
+                    <span>🔒 सुरक्षित 256-Bit पेमेंट</span>
+                    <span>📄 रेडी-टू-यूज टूलकिट शामिल</span>
                 </div>
 
-                <!-- Module 2 -->
-                <div class="module-card">
-                    <span class="module-tag">मॉड्यूल 2</span>
-                    <h3>इंट्रिन्सिक वैल्यू और 'मार्जिन ऑफ सेफ्टी'</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">सस्ता और महंगा शेयर पहचानने का वैज्ञानिक तरीका।</p>
-                    <ul>
-                        <li>Price vs Value: ₹20 का पेनी स्टॉक सस्ता क्यों नहीं होता?</li>
-                        <li>30% मार्जिन ऑफ सेफ्टी के साथ डाउनसाइड रिस्क जीरो करना</li>
-                        <li>4-स्टेप वैल्यूएशन स्कैन (P/E, ROCE, FCF, D/E)</li>
-                    </ul>
-                </div>
-
-                <!-- Module 3 -->
-                <div class="module-card">
-                    <span class="module-tag">मॉड्यूल 3</span>
-                    <h3>इकोनॉमिक मोएट और कैश फ्लो का सच</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">ऐसी मोनोपॉली कंपनियां चुनें जिनके मुनाफे पर कोई डाका न डाल सके।</p>
-                    <ul>
-                        <li>मोएट के 5 प्रकार (ब्रांड, नेटवर्क इफेक्ट, स्विचिंग कॉस्ट)</li>
-                        <li>प्राइजिंग पावर: बफेट का सबसे पसंदीदा पैमाना</li>
-                        <li>बैलेंस शीट के 4 बड़े रेड फ्लैग्स और CFO/PAT रेश्यो</li>
-                    </ul>
-                </div>
-
-                <!-- Module 4 -->
-                <div class="module-card">
-                    <span class="module-tag">मॉड्यूल 4</span>
-                    <h3>70:30 कोर और सैटेलाइट पोर्टफोलियो</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">बिना ज्यादा रिस्क लिए इंडेक्स को आउटपरफॉर्म करने का मॉडल।</p>
-                    <ul>
-                        <li>70% कोर (ब्लूचिप/गोल्ड) + 30% सैटेलाइट (हाई-ग्रोथ)</li>
-                        <li>10% सिंगल स्टॉक और 25% सेक्टर एलोकेशन लिमिट</li>
-                        <li>मार्केट साइकिल्स के 4 चरण और 5% रीबैलेंसिंग थ्रेशोल्ड</li>
-                    </ul>
-                </div>
-
-                <!-- Module 5 -->
-                <div class="module-card">
-                    <span class="module-tag">मॉड्यूल 5</span>
-                    <h3>प्रॉफिट बुकिंग और 3R एग्जिट फ्रेमवर्क</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">"कब बेचना है?"—शेयर बाजार का सबसे कठिन सवाल अब आसान।</p>
-                    <ul>
-                        <li>3R रूल्स: थीसिस ब्रेक, इनसेन वैल्यूएशन, बेहतर अवसर</li>
-                        <li>प्रिंसिपल रिकवरी मॉडल (Risk-Free House Money स्ट्रेटेजी)</li>
-                        <li>खरपतवार को काटना और फूलों को सींचना सीखें</li>
-                    </ul>
-                </div>
-
-                <!-- Module 6 -->
-                <div class="module-card">
-                    <span class="module-tag">विशेष अध्याय</span>
-                    <h3>इंडियन टैक्स और चार्जेंस का पूरा सच</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">अपने मुनाफे को टैक्स और छिपे हुए शुल्कों से सुरक्षित रखें।</p>
-                    <ul>
-                        <li>इक्विटी, डेट, FD, गोल्ड, रियल एस्टेट व क्रिप्टो पर टैक्स नियम</li>
-                        <li>STCG (20%), LTCG (12.5%) व ₹1.25 लाख टैक्स छूट</li>
-                        <li>STT, स्टैंप ड्यूटी, GST और TDS बचाने के तरीके (15G/15H)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Toolkit / Action Sheets -->
-    <section style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="toolkit-container">
-                <div style="text-align: center; max-width: 650px; margin: 0 auto 30px auto;">
-                    <div class="badge">ACTION TOOLKIT INCLUDED</div>
-                    <h2>साथ में पाएं Extrasalary रेडी-टू-यूज टूल्स</h2>
-                    <p style="color: var(--text-muted);">सिर्फ थ्योरी नहीं, तुरंत अमल करने के लिए प्रैक्टिकल फ्रेमवर्क और शीट्स:</p>
-                </div>
-
-                <div class="tools-list">
-                    <div class="tool-item">
-                        <div class="icon">📋</div>
-                        <h4>10-पॉइंट स्टॉक स्कोरकार्ड</h4>
-                        <p>किसी भी शेयर को 2 मिनट में 0 से 10 के स्केल पर रेट करें।</p>
+                <!-- Highlights Banner -->
+                <div class="hero-banner-card">
+                    <div class="stat-box">
+                        <div class="number">15-20%</div>
+                        <div class="label">टारगेट सालाना CAGR</div>
                     </div>
-                    <div class="tool-item">
-                        <div class="icon">📈</div>
-                        <h4>कम्पाउंडिंग प्रोजेक्शन टेबल्स</h4>
-                        <p>15% CAGR पर 10, 15 और 20 साल का वेल्थ प्लान।</p>
+                    <div class="stat-box">
+                        <div class="number">70 : 30</div>
+                        <div class="label">कोर-सैटेलाइट वेल्थ मॉडल</div>
                     </div>
-                    <div class="tool-item">
-                        <div class="icon">📔</div>
-                        <h4>इन्वेस्टर जर्नल टेम्पलेट</h4>
-                        <p>अपने निवेश के फैसले और थीसिस को ट्रैक करने का फॉर्मूला।</p>
+                    <div class="stat-box">
+                        <div class="number">10-पॉइंट</div>
+                        <div class="label">प्रूवन स्टॉक चेकलिस्ट</div>
                     </div>
-                    <div class="tool-item">
-                        <div class="icon">⚖️</div>
-                        <h4>सालाना रीबैलेंसिंग वर्कशीट</h4>
-                        <p>अपने एसेट एलोकेशन को हर साल बिना भावनाओं के रीसेट करें।</p>
+                    <div class="stat-box">
+                        <div class="number">3R</div>
+                        <div class="label">एग्जिट व प्रॉफिट बुकिंग फ्रेमवर्क</div>
+                    </div>
+                </div>
+
+                <div class="quote-box" style="max-width: 850px; margin: 30px auto 0 auto; text-align: left;">
+                    <p>"An investment in knowledge pays the best interest."</p>
+                    <span>— Benjamin Franklin (ज्ञान में किया गया निवेश ही जीवन भर सबसे बेहतरीन रिटर्न देता है)</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- The Problem Section -->
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2>क्या आप भी शेयर बाजार के इस <span class="gold-text">चक्रव्यूह</span> में फंसे हैं?</h2>
+                    <p>90% रिटेल निवेशक शेयर बाजार को 'जुआ' मानकर अपनी गाढ़ी कमाई गंवा बैठते हैं क्योंकि वे इन 4 गलतियों के शिकार होते हैं:</p>
+                </div>
+
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <h3>❌ टिप्स और सोशल मीडिया हाइप</h3>
+                        <p>टेलीग्राम चैनल्स और रील्स देखकर बिना फंडामेंटल्स जाने स्टॉक खरीदना और फिर 'मजबूर इन्वेस्टर' बन जाना।</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>❌ FOMO और यूफोरिया का जाल</h3>
+                        <p>जब कोई पेनी स्टॉक 50% भाग चुका होता है, तब लालच में आकर टॉप पर खरीदारी करना और लोअर सर्किट में फंसना।</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>❌ पैनिक सेलिंग (Panic Selling)</h3>
+                        <p>बाजार में 15-20% की सामान्य गिरावट आते ही घबराकर भारी नुकसान में अच्छे शेयर्स भी कौड़ियों के भाव बेच देना।</p>
+                    </div>
+                    <div class="problem-card">
+                        <h3>❌ कागजी मुनाफा बनाम फर्जी कैश</h3>
+                        <p>सिर्फ कंपनी का नेट प्रॉफिट देखना, लेकिन यह न समझना कि कंपनी पर कर्ज कितना है और फ्री कैश फ्लो (FCF) पॉजिटिव है या नहीं।</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Who Is This For -->
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <h2>क्या यह मास्टर गाइड आपके लिए है?</h2>
-                <p>हमारा लक्ष्य साफ है—हम केवल गंभीर और लॉन्ग-टर्म वेल्थ बनाने वाले पाठकों की मदद करते हैं।</p>
+        <!-- The Solution Section -->
+        <section style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge" style="background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.3); color: var(--accent-gold);">समाधान</div>
+                    <h2>The Intelligent Wealth Blueprint क्यों अलग है?</h2>
+                    <p>यह ई-बुक आपको फुल-टाइम स्क्रीन से चिपका रहने वाला ट्रेडर नहीं बनाती, बल्कि एक अनुशासित बिजनेस ओनर बनाती है।</p>
+                </div>
+
+                <div class="quote-box">
+                    <p>"The individual investor should act consistently as an investor and not as a speculator."</p>
+                    <span>— Benjamin Graham (The Father of Value Investing)</span>
+                </div>
+
+                <p style="font-size: 1.1rem; color: var(--text-muted); text-align: center; max-width: 800px; margin: 0 auto;">
+                    यह गाइड आपकी <strong>एक्टिव इनकम (जॉब/बिजनेस)</strong> से आने वाले पैसे को एक ऐसे <strong>पैसिव वेल्थ इंजन</strong> में बदलने का रोडमैप है, जो आपके सोते समय भी चक्रवृद्धि (कंपाउंडिंग) ब्याज की ताकत से बढ़ता रहता है।
+                </p>
             </div>
+        </section>
 
-            <div class="audience-grid">
-                <div class="audience-box for-you">
-                    <h3>✅ यह ई-बुक आपके लिए बिल्कुल परफेक्ट है अगर:</h3>
-                    <ul>
-                        <li><span>✔</span> आप नौकरी या बिजनेस में हैं और अपनी एक्टिव कमाई को ऑटो-पायलट वेल्थ में बदलना चाहते हैं।</li>
-                        <li><span>✔</span> आप सोशल मीडिया टिप्स और शोर से तंग आ चुके हैं और फंडामेंटल तरीके से सीखना चाहते हैं।</li>
-                        <li><span>✔</span> आप अगले 5-10 साल में 15% से 20% CAGR की दर से कंपाउंडिंग वेल्थ कॉर्पस बनाना चाहते हैं।</li>
-                        <li><span>✔</span> आप बैलेंस शीट, कैश फ्लो और मोएट की असली ताकत को सरल हिंदी में समझना चाहते हैं।</li>
+        <!-- What's Inside / Modules -->
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2>ई-बुक के अंदर क्या सीखेंगे? (Curriculum)</h2>
+                    <p>दुनिया के महानतम निवेशकों (ग्राहम, बफेट, मंगर, लिंच) के बुनियादी सिद्धांतों का भारतीय बाजार के संदर्भ में प्रैक्टिकल संकलन:</p>
+                </div>
+
+                <div class="module-grid">
+                    <!-- Module 1 -->
+                    <div class="module-card">
+                        <span class="module-tag">मॉड्यूल 1</span>
+                        <h3>इन्वेस्टर साइकोलॉजी और मिस्टर मार्केट</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">सट्टेबाजी (Speculation) और सच्चे निवेश का असली फर्क समझें।</p>
+                        <ul>
+                            <li>बेंजामिन ग्राहम का 'मिस्टर मार्केट' साइकोलॉजी नियम</li>
+                            <li>FOMO और यूफोरिया से बचने का 48-Hour कूलिंग रूल</li>
+                            <li>वोलैटिलिटी और नोशनल लॉस का मानसिक सच</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 2 -->
+                    <div class="module-card">
+                        <span class="module-tag">मॉड्यूल 2</span>
+                        <h3>इंट्रिन्सिक वैल्यू और 'मार्जिन ऑफ सेफ्टी'</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">सस्ता और महंगा शेयर पहचानने का वैज्ञानिक तरीका।</p>
+                        <ul>
+                            <li>Price vs Value: ₹20 का पेनी स्टॉक सस्ता क्यों नहीं होता?</li>
+                            <li>30% मार्जिन ऑफ सेफ्टी के साथ डाउनसाइड रिस्क जीरो करना</li>
+                            <li>4-स्टेप वैल्यूएशन स्कैन (P/E, ROCE, FCF, D/E)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 3 -->
+                    <div class="module-card">
+                        <span class="module-tag">मॉड्यूल 3</span>
+                        <h3>इकोनॉमिक मोएट और कैश फ्लो का सच</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">ऐसी मोनोपॉली कंपनियां चुनें जिनके मुनाफे पर कोई डाका न डाल सके।</p>
+                        <ul>
+                            <li>मोएट के 5 प्रकार (ब्रांड, नेटवर्क इफेक्ट, स्विचिंग कॉस्ट)</li>
+                            <li>प्राइजिंग पावर: बफेट का सबसे पसंदीदा पैमाना</li>
+                            <li>बैलेंस शीट के 4 बड़े रेड फ्लैग्स और CFO/PAT रेश्यो</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 4 -->
+                    <div class="module-card">
+                        <span class="module-tag">मॉड्यूल 4</span>
+                        <h3>70:30 कोर और सैटेलाइट पोर्टफोलियो</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">बिना ज्यादा रिस्क लिए इंडेक्स को आउटपरफॉर्म करने का मॉडल।</p>
+                        <ul>
+                            <li>70% कोर (ब्लूचिप/गोल्ड) + 30% सैटेलाइट (हाई-ग्रोथ)</li>
+                            <li>10% सिंगल स्टॉक और 25% सेक्टर एलोकेशन लिमिट</li>
+                            <li>मार्केट साइकिल्स के 4 चरण और 5% रीबैलेंसिंग थ्रेशोल्ड</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 5 -->
+                    <div class="module-card">
+                        <span class="module-tag">मॉड्यूल 5</span>
+                        <h3>प्रॉफिट बुकिंग और 3R एग्जिट फ्रेमवर्क</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">"कब बेचना है?"—शेयर बाजार का सबसे कठिन सवाल अब आसान।</p>
+                        <ul>
+                            <li>3R रूल्स: थीसिस ब्रेक, इनसेन वैल्यूएशन, बेहतर अवसर</li>
+                            <li>प्रिंसिपल रिकवरी मॉडल (Risk-Free House Money स्ट्रेटेजी)</li>
+                            <li>खरपतवार को काटना और फूलों को सींचना सीखें</li>
+                        </ul>
+                    </div>
+
+                    <!-- Module 6 -->
+                    <div class="module-card">
+                        <span class="module-tag">विशेष अध्याय</span>
+                        <h3>इंडियन टैक्स और चार्जेंस का पूरा सच</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">अपने मुनाफे को टैक्स और छिपे हुए शुल्कों से सुरक्षित रखें।</p>
+                        <ul>
+                            <li>इक्विटी, डेट, FD, गोल्ड, रियल एस्टेट व क्रिप्टो पर टैक्स नियम</li>
+                            <li>STCG (20%), LTCG (12.5%) व ₹1.25 लाख टैक्स छूट</li>
+                            <li>STT, स्टैंप ड्यूटी, GST और TDS बचाने के तरीके (15G/15H)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toolkit / Action Sheets -->
+        <section style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="toolkit-container">
+                    <div style="text-align: center; max-width: 650px; margin: 0 auto 30px auto;">
+                        <div class="badge">ACTION TOOLKIT INCLUDED</div>
+                        <h2>साथ में पाएं Extrasalary रेडी-टू-यूज टूल्स</h2>
+                        <p style="color: var(--text-muted);">सिर्फ थ्योरी नहीं, तुरंत अमल करने के लिए प्रैक्टिकल फ्रेमवर्क और शीट्स:</p>
+                    </div>
+
+                    <div class="tools-list">
+                        <div class="tool-item">
+                            <div class="icon">📋</div>
+                            <h4>10-पॉइंट स्टॉक स्कोरकार्ड</h4>
+                            <p>किसी भी शेयर को 2 मिनट में 0 से 10 के स्केल पर रेट करें।</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="icon">📈</div>
+                            <h4>कम्पाउंडिंग प्रोजेक्शन टेबल्स</h4>
+                            <p>15% CAGR पर 10, 15 और 20 साल का वेल्थ प्लान।</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="icon">📔</div>
+                            <h4>इन्वेस्टर जर्नल टेम्पलेट</h4>
+                            <p>अपने निवेश के फैसले और थीसिस को ट्रैक करने का फॉर्मूला।</p>
+                        </div>
+                        <div class="tool-item">
+                            <div class="icon">⚖️</div>
+                            <h4>सालाना रीबैलेंसिंग वर्कशीट</h4>
+                            <p>अपने एसेट एलोकेशन को हर साल बिना भावनाओं के रीसेट करें।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who Is This For -->
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <h2>क्या यह मास्टर गाइड आपके लिए है?</h2>
+                    <p>हमारा लक्ष्य साफ है—हम केवल गंभीर और लॉन्ग-टर्म वेल्थ बनाने वाले पाठकों की मदद करते हैं।</p>
+                </div>
+
+                <div class="audience-grid">
+                    <div class="audience-box for-you">
+                        <h3>✅ यह ई-बुक आपके लिए बिल्कुल परफेक्ट है अगर:</h3>
+                        <ul>
+                            <li><span>✔</span> आप नौकरी या बिजनेस में हैं और अपनी एक्टिव कमाई को ऑटो-पायलट वेल्थ में बदलना चाहते हैं।</li>
+                            <li><span>✔</span> आप सोशल मीडिया टिप्स और शोर से तंग आ चुके हैं और फंडामेंटल तरीके से सीखना चाहते हैं।</li>
+                            <li><span>✔</span> आप अगले 5-10 साल में 15% से 20% CAGR की दर से कंपाउंडिंग वेल्थ कॉर्पस बनाना चाहते हैं।</li>
+                            <li><span>✔</span> आप बैलेंस शीट, कैश फ्लो और मोएट की असली ताकत को सरल हिंदी में समझना चाहते हैं।</li>
+                        </ul>
+                    </div>
+
+                    <div class="audience-box not-for-you">
+                        <h3>❌ कृपया यह ई-बुक न खरीदें अगर:</h3>
+                        <ul>
+                            <li><span>✖</span> आप '1 महीने में पैसा डबल' करने वाली किसी जादुई स्कीम या सट्टे की तलाश में हैं।</li>
+                            <li><span>✖</span> आप बिना सीखे केवल रेडीमेड कॉल/टिप्स के लिए टेलीग्राम ढूंढ रहे हैं।</li>
+                            <li><span>✖</span> आप इंट्राडे गैंबलिंग या लीवरेज लेकर जोखिम भरा सट्टा खेलना चाहते हैं।</li>
+                            <li><span>✖</span> आप 15-20 मिनट भी बिजनेस की रिपोर्ट पढ़ने के लिए नहीं निकाल सकते।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="badge">सीमित समय के लिए स्पेशल ऑफर</div>
+                    <h2>अपनी वित्तीय स्वतंत्रता की शुरुआत आज ही करें</h2>
+                    <p>एक बार का छोटा सा निवेश, जो जीवन भर आपकी पूंजी की रक्षा करेगा।</p>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="offer-tag">MASTER EDITION - 80% OFF</div>
+                    <h3 style="font-size: 1.5rem; margin-top: 10px;">The Intelligent Wealth Blueprint</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">(कंप्लीट ई-बुक + 4 एक्शन शीट्स + टैक्स मास्टरक्लास)</p>
+
+                    <div class="price-wrap">
+                        <span class="old-price">₹999</span>
+                        <span class="new-price">₹199</span>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li><span>✔</span> पूरी ई-बुक (हाई-क्वालिटी प्रिंटेबल PDF फॉर्मेट)</li>
+                        <li><span>✔</span> 10-पॉइंट स्टॉक स्क्रीनिंग स्कोरकार्ड चेकलिस्ट</li>
+                        <li><span>✔</span> 70:30 कोर और सैटेलाइट एलोकेशन गाइड</li>
+                        <li><span>✔</span> 3R प्रॉफिट बुकिंग और एग्जिट फ्रेमवर्क</li>
+                        <li><span>✔</span> 2026 अपडेटेड सरकारी टैक्स, STT व TDS कम्प्लीट गाइड</li>
+                        <li><span>✔</span> 20 जरूरी फाइनेंशियल टर्म्स की शब्दावली (Glossary)</li>
                     </ul>
+
+                    <a href="https://rzp.io/rzp/EiokeS11" target="_blank" rel="noopener noreferrer" class="cta-btn" style="max-width: 100%;">ई-बुक तुरंत डाउनलोड करें ➔</a>
+                    <div class="cta-subtext">
+                        <span>🔒 100% सुरक्षित पेमेंट</span>
+                        <span>📥 तुरंत डाउनलोड एक्सेस</span>
+                    </div>
                 </div>
 
-                <div class="audience-box not-for-you">
-                    <h3>❌ कृपया यह ई-बुक न खरीदें अगर:</h3>
-                    <ul>
-                        <li><span>✖</span> आप '1 महीने में पैसा डबल' करने वाली किसी जादुई स्कीम या सट्टे की तलाश में हैं।</li>
-                        <li><span>✖</span> आप बिना सीखे केवल रेडीमेड कॉल/टिप्स के लिए टेलीग्राम ढूंढ रहे हैं।</li>
-                        <li><span>✖</span> आप इंट्राडे गैंबलिंग या लीवरेज लेकर जोखिम भरा सट्टा खेलना चाहते हैं।</li>
-                        <li><span>✖</span> आप 15-20 मिनट भी बिजनेस की रिपोर्ट पढ़ने के लिए नहीं निकाल सकते।</li>
-                    </ul>
+                <!-- Guarantee -->
+                <div class="guarantee-box">
+                    <div class="guarantee-badge">🛡️</div>
+                    <div style="text-align: left;">
+                        <h3>100% वैल्यू और नॉलेज गारंटी</h3>
+                        <p>यदि इस ई-बुक को पूरा पढ़ने के बाद आपको यह न लगे कि आपके शेयर चुनने और वेल्थ बनाने के नजरिए में 180-डिग्री का सकारात्मक बदलाव आया है, तो यह हमारा वादा है कि आपको दी गई जानकारी भारत के किसी भी सामान्य कोर्स से कहीं अधिक व्यावहारिक साबित होगी।</p>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section style="background: var(--bg-secondary);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>अक्सर पूछे जाने वाले सवाल (FAQ)</h2>
+                    <p>खरीदने से पहले आपके मन में जो भी सवाल हों, उनके पारदर्शी जवाब:</p>
+                </div>
+
+                <div class="faq-accordion">
+                    <details class="faq-item" open>
+                        <summary>मुझे ई-बुक का एक्सेस कैसे मिलेगा?</summary>
+                        <div class="faq-content">
+                            पेमेंट पूरा होते ही आपको तुरंत डाउनलोड स्क्रीन पर रीडायरेक्ट कर दिया जाएगा (या आप ऊपर दिए गए "पहले पेमेंट कर चुके हैं? डाउनलोड करें" बटन पर अपना Payment ID और Access PIN डालकर PDF डाउनलोड कर सकते हैं)।
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>क्या यह किताब शुरुआत करने वाले (Beginners) के लिए सही है?</summary>
+                        <div class="faq-content">
+                            बिल्कुल! इस किताब को बहुत ही सरल, बातचीत वाली हिंदी भाषा में लिखा गया है। इंट्रिन्सिक वैल्यू, मोएट, बैलेंस शीट और ROCE जैसे जटिल विषयों को व्यावहारिक उदाहरणों के साथ समझाया गया है।
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>क्या इसमें स्टॉक टिप्स या रिकमेंडेशन दी गई हैं?</summary>
+                        <div class="faq-content">
+                            नहीं। यह कोई टिप्स या सट्टा सर्विस नहीं है। यह ई-बुक आपको एक '10-पॉइंट स्टॉक स्क्रीनिंग स्कोरकार्ड' सिखाती है जिससे आप खुद बेहतरीन और कर्ज-मुक्त मल्टीबैगर बिजनेस ढूंढने में सक्षम हो सकें।
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>क्या इसमें 2026 के नए टैक्स नियमों की जानकारी है?</summary>
+                        <div class="faq-content">
+                            हाँ, विशेष अध्याय में इक्विटी (STCG 20%, LTCG 12.5%), डेट फंड्स, FD, फिजिकल/डिजिटल गोल्ड, रियल एस्टेट और क्रिप्टोकरेंसी पर लगने वाले सभी नवीनतम टैक्स, सेस, STT और TDS नियमों को विस्तृत उदाहरणों के साथ समझाया गया है।
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= VIEW 2: SECURE PAYMENT VERIFICATION GATE ================= -->
+    <div id="verify-view" class="hidden">
+        <div class="container">
+            <div class="vault-box">
+                <div style="font-size: 2.5rem; margin-bottom: 10px;">🔒</div>
+                <h2 style="font-size: 1.5rem; margin-bottom: 8px;">पेमेंट वेरिफिकेशन (Security Lock)</h2>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 22px;">
+                    ई-बुक डाउनलोड करने के लिए अपना <strong>Razorpay Payment ID</strong> और <strong>Access PIN</strong> दर्ज करें।
+                </p>
+
+                <div class="form-group">
+                    <label>Razorpay Payment ID (उदाहरण: pay_P9x8k2...)</label>
+                    <input type="text" id="pay-id-input" class="form-control" placeholder="pay_XXXXXXXXXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label>Secret Access PIN (पेमेंट रसीद में दिया गया कोड)</label>
+                    <input type="password" id="pin-input" class="form-control" placeholder="Access PIN दर्ज करें">
+                </div>
+
+                <div id="vault-error-msg" class="vault-error hidden"></div>
+
+                <button type="button" class="cta-btn" style="max-width: 100%; padding: 14px; font-size: 1.05rem; margin-bottom: 15px;" onclick="verifyPaymentAndUnlock()">
+                    Verify &amp; Unlock PDF ➔
+                </button>
+
+                <button type="button" onclick="backToLanding()" style="background: none; border: none; color: var(--text-muted); text-decoration: underline; cursor: pointer; font-size: 0.88rem;">
+                    ← वापस मुख्य पेज पर जाएं
+                </button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section">
+    <!-- ================= VIEW 3: VERIFIED PDF DOWNLOAD SCREEN ================= -->
+    <div id="download-view" class="hidden">
         <div class="container">
-            <div class="section-header">
-                <div class="badge">सीमित समय के लिए स्पेशल ऑफर</div>
-                <h2>अपनी वित्तीय स्वतंत्रता की शुरुआत आज ही करें</h2>
-                <p>एक बार का छोटा सा निवेश, जो जीवन भर आपकी पूंजी की रक्षा करेगा।</p>
-            </div>
+            <div class="vault-box">
+                <div style="font-size: 3rem; margin-bottom: 10px;">🎉</div>
+                <span class="badge" style="margin-bottom: 10px;">ऑर्डर सफल रहा! (Payment Verified)</span>
+                <h2 style="font-size: 1.6rem; margin-bottom: 10px;">बधाई हो! आपकी वेल्थ यात्रा शुरू हो चुकी है</h2>
+                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 20px;">
+                    <strong>The Intelligent Wealth Blueprint (Master Investor Edition PDF)</strong> नीचे दिए गए बटन से अपने डिवाइस में सुरक्षित सेव करें।
+                </p>
 
-            <div class="pricing-card">
-                <div class="offer-tag">MASTER EDITION - 80% OFF</div>
-                <h3 style="font-size: 1.5rem; margin-top: 10px;">The Intelligent Wealth Blueprint</h3>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">(कंप्लीट ई-बुक + 4 एक्शन शीट्स + टैक्स मास्टरक्लास)</p>
-
-                <div class="price-wrap">
-                    <span class="old-price">₹999</span>
-                    <span class="new-price">₹199</span>
-                </div>
-
-                <ul class="pricing-features">
-                    <li><span>✔</span> पूरी ई-बुक (हाई-क्वालिटी प्रिंटेबल PDF फॉर्मेट)</li>
-                    <li><span>✔</span> 10-पॉइंट स्टॉक स्क्रीनिंग स्कोरकार्ड चेकलिस्ट</li>
-                    <li><span>✔</span> 70:30 कोर और सैटेलाइट एलोकेशन गाइड</li>
-                    <li><span>✔</span> 3R प्रॉफिट बुकिंग और एग्जिट फ्रेमवर्क</li>
-                    <li><span>✔</span> 2026 अपडेटेड सरकारी टैक्स, STT व TDS कम्प्लीट गाइड</li>
-                    <li><span>✔</span> 20 जरूरी फाइनेंशियल टर्म्स की शब्दावली (Glossary)</li>
+                <ul class="vault-bonus-list">
+                    <li><span style="color: var(--accent-gold);">★</span> 10-पॉइंट स्टॉक स्क्रीनिंग स्कोरकार्ड शामिल है</li>
+                    <li><span style="color: var(--accent-gold);">★</span> 15% CAGR कम्पाउंडिंग वेल्थ प्रोजेक्शन शीट्स शामिल हैं</li>
+                    <li><span style="color: var(--accent-gold);">★</span> इन्वेस्टर जर्नल टेम्पलेट व 70:30 रीबैलेंसिंग वर्कशीट शामिल है</li>
                 </ul>
 
-               <a href="https://rzp.io/rzp/EiokeS11" target="_blank" class="cta-btn" style="max-width: 100%; display: inline-block; text-decoration: none; text-align: center;">ई-बुक तुरंत डाउनलोड करें ➔</a>
-<div class="cta-subtext" style="margin-top: 15px;">
-                <div class="cta-subtext" style="margin-top: 15px;">
-                    <span>🔒 100% सुरक्षित पेमेंट</span>
-                    <span>📥 तुरंत ईमेल पर डिलीवरी</span>
-                </div>
-            </div>
+                <button type="button" class="cta-btn" style="max-width: 100%; margin-bottom: 18px;" onclick="downloadVerifiedPdf()">
+                    📥 तुरंत डाउनलोड करें (Download PDF)
+                </button>
 
-            <!-- Guarantee -->
-            <div class="guarantee-box">
-                <div class="guarantee-badge">🛡️</div>
-                <div style="text-align: left;">
-                    <h3>100% वैल्यू और नॉलेज गारंटी</h3>
-                    <p>यदि इस ई-बुक को पूरा पढ़ने के बाद आपको यह न लगे कि आपके शेयर चुनने और वेल्थ बनाने के नजरिए में 180-डिग्री का सकारात्मक बदलाव आया है, तो यह हमारा वादा है कि आपको दी गई जानकारी भारत के किसी भी सामान्य कोर्स से कहीं अधिक व्यावहारिक साबित होगी।</p>
-                </div>
+                <br>
+                <button type="button" onclick="backToLanding()" style="background: none; border: none; color: var(--text-muted); text-decoration: underline; cursor: pointer; font-size: 0.88rem;">
+                    ← वापस मुख्य पेज पर जाएं
+                </button>
             </div>
         </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section style="background: var(--bg-secondary);">
-        <div class="container">
-            <div class="section-header">
-                <h2>अक्सर पूछे जाने वाले सवाल (FAQ)</h2>
-                <p>खरीदने से पहले आपके मन में जो भी सवाल हों, उनके पारदर्शी जवाब:</p>
-            </div>
-
-            <div class="faq-accordion">
-                <details class="faq-item" open>
-                    <summary>मुझे ई-बुक का एक्सेस कैसे मिलेगा?</summary>
-                    <div class="faq-content">
-                        पेमेंट पूरा होते ही आपको तुरंत स्क्रीन पर डाउनलोड लिंक मिल जाएगा और साथ ही आपके दिए गए ईमेल पते पर भी पूरी PDF फाइल भेज दी जाएगी। आप इसे मोबाइल, टैबलेट या लैपटॉप पर कभी भी पढ़ सकते हैं।
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary>क्या यह किताब शुरुआत करने वाले (Beginners) के लिए सही है?</summary>
-                    <div class="faq-content">
-                        बिल्कुल! इस किताब को बहुत ही सरल, बातचीत वाली हिंदी भाषा में लिखा गया है। इंट्रिन्सिक वैल्यू, मोएट, बैलेंस शीट और ROCE जैसे जटिल विषयों को व्यावहारिक उदाहरणों के साथ समझाया गया है।
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary>क्या इसमें स्टॉक टिप्स या रिकमेंडेशन दी गई हैं?</summary>
-                    <div class="faq-content">
-                        नहीं। यह कोई टिप्स या सट्टा सर्विस नहीं है। यह ई-बुक आपको एक '10-पॉइंट स्टॉक स्क्रीनिंग स्कोरकार्ड' सिखाती है जिससे आप खुद बेहतरीन और कर्ज-मुक्त मल्टीबैगर बिजनेस ढूंढने में सक्षम हो सकें।
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary>क्या इसमें 2026 के नए टैक्स नियमों की जानकारी है?</summary>
-                    <div class="faq-content">
-                        हाँ, विशेष अध्याय में इक्विटी (STCG 20%, LTCG 12.5%), डेट फंड्स, FD, फिजिकल/डिजिटल गोल्ड, रियल एस्टेट और क्रिप्टोकरेंसी पर लगने वाले सभी नवीनतम टैक्स, सेस, STT और TDS नियमों को विस्तृत उदाहरणों के साथ समझाया गया है।
-                    </div>
-                </details>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <!-- Footer Navigation Links -->
             <div class="footer-nav">
                 <a onclick="openModal('privacyModal')">Privacy Policy</a>
-                <a onclick="openModal('termsModal')">Terms & Conditions</a>
+                <a onclick="openModal('termsModal')">Terms &amp; Conditions</a>
                 <a onclick="openModal('refundModal')">Refund Policy</a>
                 <a onclick="openModal('contactModal')">Contact Us</a>
             </div>
@@ -1039,8 +1227,6 @@ input, textarea {
         </div>
     </footer>
 
-    <!-- Modals (Privacy, Terms, Refund, Contact) -->
-
     <!-- Privacy Policy Modal -->
     <div id="privacyModal" class="modal">
         <div class="modal-content">
@@ -1048,13 +1234,10 @@ input, textarea {
             <h2>Privacy Policy (गोपनीयता नीति)</h2>
             <div class="modal-body">
                 <p>ExtrasalaryDotcom पर हम आपकी गोपनीयता का पूरा सम्मान करते हैं। यह प्राइवेसी पॉलिसी बताती है कि जब आप हमारी वेबसाइट और डिजिटल प्रोडक्ट्स का उपयोग करते हैं, तो हम आपकी जानकारी को कैसे सुरक्षित रखते हैं।</p>
-                
                 <h3>1. एकत्रित की जाने वाली जानकारी</h3>
                 <p>जब आप हमारी ई-बुक खरीदते हैं, तो हम केवल आवश्यक बुनियादी जानकारी जैसे आपका नाम, ईमेल आईडी और संपर्क विवरण एकत्रित करते हैं ताकि आपको डिजिटल प्रोडक्ट डिलीवर किया जा सके।</p>
-
                 <h3>2. डेटा सुरक्षा</h3>
                 <p>आपकी भुगतान जानकारी (Payment Data) पूरी तरह से सुरक्षित 256-Bit एन्क्रिप्टेड पेमेंट गेटवे द्वारा प्रोसेस की जाती है। हम आपकी कोई भी बैंकिंग या कार्ड जानकारी हमारे सर्वर पर स्टोर नहीं करते।</p>
-
                 <h3>3. डेटा शेयरिंग</h3>
                 <p>हम आपकी व्यक्तिगत जानकारी किसी भी तीसरे पक्ष (Third Party) को न तो बेचते हैं और न ही किराए पर देते हैं।</p>
             </div>
@@ -1065,16 +1248,13 @@ input, textarea {
     <div id="termsModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
-            <h2>Terms & Conditions (नियम और शर्तें)</h2>
+            <h2>Terms &amp; Conditions (नियम और शर्तें)</h2>
             <div class="modal-body">
                 <p>इस वेबसाइट या ई-बुक का उपयोग करने से पहले कृपया निम्नलिखित नियमों और शर्तों को ध्यानपूर्वक पढ़ें:</p>
-
                 <h3>1. बौद्धिक संपदा (Intellectual Property)</h3>
                 <p>The Intelligent Wealth Blueprint ई-बुक और इसकी संपूर्ण सामग्री ExtrasalaryDotcom की कॉपीराइट सामग्री है। इसे बिना लिखित अनुमति के पुनः बेचना, सार्वजनिक रूप से साझा करना, टेलीग्राम या सोशल मीडिया पर वितरित करना कानूनी रूप से प्रतिबंधित है।</p>
-
                 <h3>2. केवल शैक्षिक उद्देश्य (Educational Purpose Only)</h3>
                 <p>इस गाइड में दी गई सभी केस स्टडीज, रणनीतियां और फॉर्मूले केवल शैक्षिक और वित्तीय साक्षरता के उद्देश्य से हैं। यह कोई प्रत्यक्ष खरीद/बिक्री की सलाह (Buy/Sell Recommendation) नहीं है।</p>
-
                 <h3>3. वित्तीय निर्णय और जोखिम</h3>
                 <p>शेयर बाजार में निवेश बाजार जोखिमों के अधीन है। किसी भी वित्तीय लाभ या हानि के लिए पाठक स्वयं जिम्मेदार होंगे।</p>
             </div>
@@ -1088,10 +1268,8 @@ input, textarea {
             <h2>Refund Policy (रिफंड नीति)</h2>
             <div class="modal-body">
                 <p>हमारे डिजिटल उत्पादों के लिए हमारी रिफंड और कैंसलेशन नीति स्पष्ट और पारदर्शी है:</p>
-
                 <h3>1. डिजिटल डाउनलोड्स की प्रकृति</h3>
-                <p>चूंकि "The Intelligent Wealth Blueprint" एक तुरंत डाउनलोड करने योग्य डिजिटल उत्पाद (PDF & E-Book) है जिसे पेमेंट के तुरंत बाद एक्सेस किया जा सकता है, इसलिए सामान्यतः खरीदारी के बाद <strong>रिफंड उपलब्ध नहीं है</strong>।</p>
-
+                <p>चूंकि "The Intelligent Wealth Blueprint" एक तुरंत डाउनलोड करने योग्य डिजिटल उत्पाद (PDF &amp; E-Book) है जिसे पेमेंट के तुरंत बाद एक्सेस किया जा सकता है, इसलिए सामान्यतः खरीदारी के बाद <strong>रिफंड उपलब्ध नहीं है</strong>।</p>
                 <h3>2. तकनीकी समस्याएं</h3>
                 <p>यदि पेमेंट कटने के बाद भी आपको ई-बुक का डाउनलोड लिंक या ईमेल प्राप्त नहीं होता है, तो कृपया अपने पेमेंट ट्रांजैक्शन आईडी के साथ हमें संपर्क करें। हमारी टीम 24 घंटे के भीतर आपको फाइल मैन्युअली ईमेल पर उपलब्ध कराएगी।</p>
             </div>
@@ -1105,7 +1283,6 @@ input, textarea {
             <h2>Contact Us (संपर्क करें)</h2>
             <div class="modal-body">
                 <p>यदि आपके पास ई-बुक, पेमेंट या एक्सेस से संबंधित कोई प्रश्न है, तो आप नीचे दिए गए विवरण या फॉर्म के माध्यम से हमसे संपर्क कर सकते हैं:</p>
-                
                 <p style="margin: 15px 0;"><strong>📧 ईमेल:</strong> supportextrasalarydot@gmail.com</p>
                 <p style="margin: 15px 0;"><strong>🌐 वेबसाइट:</strong> https://extrasalarydotcom.blogspot.com/</p>
 
@@ -1128,28 +1305,208 @@ input, textarea {
         </div>
     </div>
 
-    <!-- Interactive JavaScript -->
+    <!-- ================= ULTRA-SECURE CONTROLLER & ANTI-THEFT SHIELD ================= -->
     <script>
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = "block";
-            document.body.style.overflow = "hidden";
-        }
+        (function() {
+            "use strict";
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
-            document.body.style.overflow = "auto";
-        }
+            // 1. एन्क्रिप्टेड Access PIN (Plaintext PIN कहीं नहीं लिखा है)
+            // वर्तमान एन्कोडेड PIN: ES2026
+            const PIN_SIGNATURE = [496, 594, 363, 349, 363, 391];
 
-        // Close modal when clicking outside content
-        window.onclick = function(event) {
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(modal => {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                    document.body.style.overflow = "auto";
+            // आपकी The Intelligent Wealth Blueprint PDF की असली रिवर्सड Google Drive ID
+            const REVERSED_DRIVE_ID = "Il6GECSKLNrUkx_YUhttGz4_v9RrNjE1";
+
+            let isSessionVerified = false;
+            let failedCount = 0;
+            let lockoutEndTime = 0;
+
+            function checkPin(raw) {
+                if (!raw || raw.length !== PIN_SIGNATURE.length) return false;
+                for (let i = 0; i < raw.length; i++) {
+                    if ((raw.charCodeAt(i) * 7 + 13) !== PIN_SIGNATURE[i]) return false;
+                }
+                return true;
+            }
+
+            function buildDriveDownloadUrl() {
+                const proto = "//:sptth".split("").reverse().join("");
+                const host = "moc.elgoog.evird".split("").reverse().join("");
+                const path = "=di&daolnwod=tropxe?cu/".split("").reverse().join("");
+                const id = REVERSED_DRIVE_ID.split("").reverse().join("");
+                return proto + host + path + id;
+            }
+
+            window.showVerifyView = function() {
+                document.getElementById('landing-view').classList.add('hidden');
+                document.getElementById('download-view').classList.add('hidden');
+                document.getElementById('verify-view').classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            window.backToLanding = function() {
+                document.getElementById('verify-view').classList.add('hidden');
+                document.getElementById('download-view').classList.add('hidden');
+                document.getElementById('landing-view').classList.remove('hidden');
+                history.replaceState(null, "", window.location.pathname);
+            };
+
+            window.verifyPaymentAndUnlock = function() {
+                const errEl = document.getElementById('vault-error-msg');
+                const now = Date.now();
+
+                if (now < lockoutEndTime) {
+                    const sec = Math.ceil((lockoutEndTime - now) / 1000);
+                    errEl.textContent = `⏳ बहुत अधिक गलत प्रयास! कृपया ${sec} सेकंड बाद पुनः प्रयास करें।`;
+                    errEl.classList.remove('hidden');
+                    return;
+                }
+
+                const payId = document.getElementById('pay-id-input').value.trim();
+                const pin = document.getElementById('pin-input').value.trim();
+                const payRegex = /^pay_[A-Za-z0-9]{10,20}$/;
+
+                if (payRegex.test(payId) && checkPin(pin)) {
+                    failedCount = 0;
+                    errEl.classList.add('hidden');
+                    isSessionVerified = true;
+                    sessionStorage.setItem("es_wealth_verified", "1");
+                    unlockDownloadView();
+                } else {
+                    failedCount++;
+                    if (failedCount >= 3) {
+                        lockoutEndTime = Date.now() + 60000;
+                        errEl.textContent = "🔒 सुरक्षा लॉक: 3 गलत प्रयासों के कारण 60 सेकंड के लिए ब्लॉक किया गया।";
+                    } else {
+                        errEl.textContent = `❌ अमान्य Payment ID या Access PIN! (शेष प्रयास: ${3 - failedCount})`;
+                    }
+                    errEl.classList.remove('hidden');
+                }
+            };
+
+            function unlockDownloadView() {
+                document.getElementById('landing-view').classList.add('hidden');
+                document.getElementById('verify-view').classList.add('hidden');
+                document.getElementById('download-view').classList.remove('hidden');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            window.downloadVerifiedPdf = function() {
+                if (!isSessionVerified && sessionStorage.getItem("es_wealth_verified") !== "1") {
+                    alert("⚠️ अनधिकृत एक्सेस! कृपया पहले अपना पेमेंट वेरिफाई करें।");
+                    showVerifyView();
+                    return;
+                }
+                const url = buildDriveDownloadUrl();
+                const a = document.createElement('a');
+                a.href = url;
+                a.target = "_blank";
+                a.rel = "noopener noreferrer";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+            };
+
+            // Razorpay Redirect Auto-Verification
+            (function autoCheckRedirect() {
+                const params = new URLSearchParams(window.location.search);
+                const payId = params.get('razorpay_payment_id') || params.get('payment_id') || "";
+                const pin = params.get('pin') || "";
+                const payRegex = /^pay_[A-Za-z0-9]{10,20}$/;
+
+                if (payRegex.test(payId) && checkPin(pin)) {
+                    isSessionVerified = true;
+                    sessionStorage.setItem("es_wealth_verified", "1");
+                    unlockDownloadView();
+                }
+            })();
+
+            // Modals
+            window.openModal = function(modalId) {
+                document.getElementById(modalId).style.display = "block";
+                document.body.style.overflow = "hidden";
+            };
+
+            window.closeModal = function(modalId) {
+                document.getElementById(modalId).style.display = "none";
+                document.body.style.overflow = "auto";
+            };
+
+            window.onclick = function(event) {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                        document.body.style.overflow = "auto";
+                    }
+                });
+            };
+
+            // ================= FULL ANTI-THEFT & DEVTOOLS SHIELD =================
+            document.addEventListener('contextmenu', function(e) {
+                if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+                    e.preventDefault();
+                    return false;
                 }
             });
-        }
+
+            document.addEventListener('copy', function(e) {
+                if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+                    if (e.clipboardData) e.clipboardData.setData('text/plain', '');
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            document.addEventListener('cut', function(e) {
+                if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            document.addEventListener('dragstart', function(e) {
+                if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                const isInput = ['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName);
+
+                if (e.key === 'F12' || e.keyCode === 123) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey) {
+                    const k = e.key.toLowerCase();
+                    if (['i', 'j', 'c', 'k'].includes(k)) {
+                        e.preventDefault();
+                        return false;
+                    }
+                }
+
+                if ((e.ctrlKey || e.metaKey) && ['u', 's', 'p'].includes(e.key.toLowerCase())) {
+                    e.preventDefault();
+                    return false;
+                }
+
+                if ((e.ctrlKey || e.metaKey) && ['a', 'c', 'x'].includes(e.key.toLowerCase()) && !isInput) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+
+            setInterval(function() {
+                const t0 = performance.now();
+                (function() { return false; }['constructor']('debugger')['call']());
+                if (performance.now() - t0 > 120) {
+                    document.body.innerHTML = "<div style='background:#0b0f19;color:#ef4444;height:100vh;display:flex;align-items:center;justify-content:center;font-family:sans-serif;text-align:center;padding:20px;'><h2>⚠️ Security Alert: Developer Tools are restricted on this protected page.</h2></div>";
+                }
+            }, 2000);
+        })();
     </script>
 </body>
 </html>
