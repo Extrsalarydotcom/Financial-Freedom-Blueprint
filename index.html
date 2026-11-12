@@ -58,7 +58,6 @@
             -webkit-user-drag: none !important;
         }
 
-        /* फॉर्म और इनपुट फील्ड्स चालू रखने के लिए */
         input, textarea, select {
             -webkit-touch-callout: default !important;
             -webkit-user-select: auto !important;
@@ -67,11 +66,8 @@
             user-select: auto !important;
         }
 
-        /* एंटी-प्रिंट शील्ड (Ctrl+P या Save as PDF ब्लॉक) */
         @media print {
-            body * {
-                display: none !important;
-            }
+            body * { display: none !important; }
             body::after {
                 content: "Protected Content - ExtrasalaryDotcom Security Shield";
                 display: block !important;
@@ -82,9 +78,7 @@
             }
         }
 
-        .hidden {
-            display: none !important;
-        }
+        .hidden { display: none !important; }
 
         .container {
             width: 100%;
@@ -93,11 +87,14 @@
             padding: 0 20px;
         }
 
-        /* Top Bar */
+        /* Top Verification Bar */
         .top-verify-bar {
             background: #111827;
             border-bottom: 1px solid var(--border-color);
             padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .top-verify-flex {
@@ -114,9 +111,7 @@
             color: #fff;
         }
 
-        .brand-logo-text span {
-            color: var(--accent-green);
-        }
+        .brand-logo-text span { color: var(--accent-green); }
 
         .btn-already-paid {
             background: rgba(34, 197, 94, 0.12);
@@ -135,7 +130,6 @@
             color: #000;
         }
 
-        /* Typography */
         h1, h2, h3, h4 {
             color: #ffffff;
             font-weight: 700;
@@ -148,11 +142,8 @@
             -webkit-text-fill-color: transparent;
         }
 
-        .gold-text {
-            color: var(--accent-gold);
-        }
+        .gold-text { color: var(--accent-gold); }
 
-        /* Badges */
         .badge {
             display: inline-flex;
             align-items: center;
@@ -169,7 +160,6 @@
             letter-spacing: 0.05em;
         }
 
-        /* Buttons */
         .cta-btn {
             display: inline-block;
             width: 100%;
@@ -178,7 +168,7 @@
             color: #ffffff;
             text-align: center;
             padding: 18px 32px;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 800;
             border-radius: 12px;
             text-decoration: none;
@@ -205,7 +195,6 @@
             flex-wrap: wrap;
         }
 
-        /* Sections General */
         section {
             padding: 80px 0;
             border-bottom: 1px solid rgba(51, 65, 85, 0.4);
@@ -217,35 +206,17 @@
             margin: 0 auto 50px auto;
         }
 
-        .section-header h2 {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-        }
+        .section-header h2 { font-size: 2.2rem; margin-bottom: 15px; }
+        .section-header p { color: var(--text-muted); font-size: 1.1rem; }
 
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
-        /* Hero Section */
         .hero {
             padding: 75px 0 70px 0;
             text-align: center;
             background: radial-gradient(circle at top, rgba(34, 197, 94, 0.15) 0%, rgba(11, 15, 25, 0) 70%);
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            letter-spacing: -0.02em;
-        }
-
-        .hero p.sub-headline {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 800px;
-            margin: 0 auto 35px auto;
-        }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; letter-spacing: -0.02em; }
+        .hero p.sub-headline { font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 35px auto; }
 
         .hero-banner-card {
             background: var(--bg-card);
@@ -262,22 +233,10 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
 
-        .stat-box {
-            text-align: center;
-        }
+        .stat-box { text-align: center; }
+        .stat-box .number { font-size: 1.8rem; font-weight: 800; color: var(--accent-gold); }
+        .stat-box .label { font-size: 0.85rem; color: var(--text-muted); }
 
-        .stat-box .number {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--accent-gold);
-        }
-
-        .stat-box .label {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Problem Section */
         .problem-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -291,21 +250,9 @@
             border-radius: 12px;
         }
 
-        .problem-card h3 {
-            color: #fca5a5;
-            font-size: 1.15rem;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+        .problem-card h3 { color: #fca5a5; font-size: 1.15rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .problem-card p { font-size: 0.95rem; color: var(--text-muted); }
 
-        .problem-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* Quote Section */
         .quote-box {
             background: var(--bg-secondary);
             border-left: 4px solid var(--accent-gold);
@@ -315,20 +262,9 @@
             font-style: italic;
         }
 
-        .quote-box p {
-            font-size: 1.15rem;
-            color: #e2e8f0;
-            margin-bottom: 8px;
-        }
+        .quote-box p { font-size: 1.15rem; color: #e2e8f0; margin-bottom: 8px; }
+        .quote-box span { font-size: 0.9rem; color: var(--accent-gold); font-style: normal; font-weight: 600; }
 
-        .quote-box span {
-            font-size: 0.9rem;
-            color: var(--accent-gold);
-            font-style: normal;
-            font-weight: 600;
-        }
-
-        /* Modules Section */
         .module-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -341,94 +277,25 @@
             border-radius: 14px;
             padding: 30px;
             transition: transform 0.2s ease, border-color 0.2s ease;
-            position: relative;
         }
 
-        .module-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-green);
-        }
+        .module-card:hover { transform: translateY(-4px); border-color: var(--accent-green); }
+        .module-tag { font-size: 0.75rem; font-weight: 700; color: var(--accent-green); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; display: block; }
+        .module-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+        .module-card ul { list-style: none; margin-top: 15px; }
+        .module-card ul li { position: relative; padding-left: 22px; margin-bottom: 10px; font-size: 0.95rem; color: var(--text-muted); }
+        .module-card ul li::before { content: "✔"; position: absolute; left: 0; color: var(--accent-green); font-size: 0.85rem; }
 
-        .module-tag {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .module-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
-
-        .module-card ul {
-            list-style: none;
-            margin-top: 15px;
-        }
-
-        .module-card ul li {
-            position: relative;
-            padding-left: 22px;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .module-card ul li::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            color: var(--accent-green);
-            font-size: 0.85rem;
-        }
-
-        /* Audience Section */
-        .audience-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .audience-box {
-            padding: 30px;
-            border-radius: 14px;
-        }
-
-        .for-you {
-            background: rgba(34, 197, 94, 0.05);
-            border: 1px solid rgba(34, 197, 94, 0.2);
-        }
-
-        .not-for-you {
-            background: rgba(239, 68, 68, 0.05);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-        }
-
-        .audience-box h3 {
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
-
+        .audience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .audience-box { padding: 30px; border-radius: 14px; }
+        .for-you { background: rgba(34, 197, 94, 0.05); border: 1px solid rgba(34, 197, 94, 0.2); }
+        .not-for-you { background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.2); }
+        .audience-box h3 { margin-bottom: 20px; font-size: 1.3rem; }
         .for-you h3 { color: var(--accent-green); }
         .not-for-you h3 { color: #fca5a5; }
+        .audience-box ul { list-style: none; }
+        .audience-box ul li { margin-bottom: 12px; font-size: 0.95rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 10px; }
 
-        .audience-box ul {
-            list-style: none;
-        }
-
-        .audience-box ul li {
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        /* Toolkit / Bonus Section */
         .toolkit-container {
             background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
             border: 1px solid var(--border-color);
@@ -443,32 +310,12 @@
             margin-top: 30px;
         }
 
-        .tool-item {
-            background: var(--bg-primary);
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-        }
+        .tool-item { background: var(--bg-primary); padding: 20px; border-radius: 10px; border: 1px solid var(--border-color); }
+        .tool-item .icon { font-size: 1.5rem; margin-bottom: 8px; }
+        .tool-item h4 { font-size: 1rem; margin-bottom: 5px; }
+        .tool-item p { font-size: 0.85rem; color: var(--text-muted); }
 
-        .tool-item .icon {
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-        }
-
-        .tool-item h4 {
-            font-size: 1rem;
-            margin-bottom: 5px;
-        }
-
-        .tool-item p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Pricing Card */
-        .pricing-section {
-            text-align: center;
-        }
+        .pricing-section { text-align: center; }
 
         .pricing-card {
             background: var(--bg-card);
@@ -482,86 +329,35 @@
         }
 
         .offer-tag {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--accent-gold);
-            color: #000000;
-            padding: 4px 16px;
-            font-size: 0.85rem;
-            font-weight: 800;
-            border-radius: 20px;
-            text-transform: uppercase;
+            position: absolute; top: -15px; left: 50%; transform: translateX(-50%);
+            background: var(--accent-gold); color: #000000; padding: 4px 16px;
+            font-size: 0.85rem; font-weight: 800; border-radius: 20px; text-transform: uppercase;
         }
 
-        .price-wrap {
-            margin: 25px 0;
-        }
-
-        .old-price {
-            font-size: 1.4rem;
-            color: var(--text-muted);
-            text-decoration: line-through;
-            margin-right: 10px;
-        }
-
-        .new-price {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: #ffffff;
-        }
+        .price-wrap { margin: 25px 0; }
+        .old-price { font-size: 1.4rem; color: var(--text-muted); text-decoration: line-through; margin-right: 10px; }
+        .new-price { font-size: 3.5rem; font-weight: 800; color: #ffffff; }
 
         .pricing-features {
-            list-style: none;
-            text-align: left;
-            margin: 30px 0;
-            border-top: 1px solid var(--border-color);
-            border-bottom: 1px solid var(--border-color);
-            padding: 20px 0;
+            list-style: none; text-align: left; margin: 30px 0;
+            border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); padding: 20px 0;
         }
 
-        .pricing-features li {
-            padding: 8px 0;
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+        .pricing-features li { padding: 8px 0; font-size: 0.95rem; color: var(--text-muted); display: flex; align-items: center; gap: 10px; }
 
-        /* Guarantee */
         .guarantee-box {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            background: rgba(245, 158, 11, 0.05);
-            border: 1px solid rgba(245, 158, 11, 0.2);
-            border-radius: 14px;
-            padding: 30px;
-            max-width: 800px;
-            margin: 40px auto 0 auto;
+            display: flex; align-items: center; gap: 25px;
+            background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2);
+            border-radius: 14px; padding: 30px; max-width: 800px; margin: 40px auto 0 auto;
         }
 
-        .guarantee-badge {
-            font-size: 3.5rem;
-            line-height: 1;
-        }
+        .guarantee-badge { font-size: 3.5rem; line-height: 1; }
+        .guarantee-box h3 { color: var(--accent-gold); font-size: 1.25rem; margin-bottom: 8px; }
+        .guarantee-box p { font-size: 0.95rem; color: var(--text-muted); }
 
-        .guarantee-box h3 {
-            color: var(--accent-gold);
-            font-size: 1.25rem;
-            margin-bottom: 8px;
-        }
-
-        .guarantee-box p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* Secure Verification & Download Gate */
+        /* Server Verification & Download Gate Styles */
         .vault-box {
-            max-width: 560px;
+            max-width: 580px;
             margin: 60px auto;
             background: var(--bg-card);
             border: 1px solid var(--accent-green);
@@ -581,6 +377,34 @@
             margin-bottom: 15px;
         }
 
+        .download-item-row {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            text-align: left;
+        }
+
+        .btn-server-dl {
+            background: var(--accent-green);
+            color: #000;
+            font-weight: 800;
+            font-size: 0.88rem;
+            padding: 11px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            white-space: nowrap;
+            display: inline-block;
+            transition: opacity 0.2s;
+        }
+
+        .btn-server-dl:hover { opacity: 0.9; }
+
         .vault-bonus-list {
             list-style: none;
             text-align: left;
@@ -588,7 +412,7 @@
             border: 1px solid var(--border-color);
             border-radius: 10px;
             padding: 16px 20px;
-            margin-bottom: 22px;
+            margin-bottom: 20px;
         }
 
         .vault-bonus-list li {
@@ -600,199 +424,48 @@
             gap: 8px;
         }
 
-        .vault-bonus-list li:last-child {
-            margin-bottom: 0;
-        }
+        .vault-bonus-list li:last-child { margin-bottom: 0; }
 
         /* FAQ */
-        .faq-accordion {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .faq-accordion { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px; margin-bottom: 15px; overflow: hidden; }
+        .faq-item summary { padding: 20px; font-weight: 600; font-size: 1.05rem; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 1.4rem; color: var(--accent-green); }
+        .faq-item[open] summary::after { content: "−"; }
+        .faq-content { padding: 0 20px 20px 20px; color: var(--text-muted); font-size: 0.95rem; border-top: 1px solid rgba(51, 65, 85, 0.3); padding-top: 15px; }
 
-        .faq-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
+        /* Footer */
+        .footer-nav { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; margin: 25px 0 20px 0; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); }
+        .footer-nav a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s ease; cursor: pointer; }
+        .footer-nav a:hover { color: var(--accent-green); }
 
-        .faq-item summary {
-            padding: 20px;
-            font-weight: 600;
-            font-size: 1.05rem;
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-item summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .faq-item summary::after {
-            content: "+";
-            font-size: 1.4rem;
-            color: var(--accent-green);
-        }
-
-        .faq-item[open] summary::after {
-            content: "−";
-        }
-
-        .faq-content {
-            padding: 0 20px 20px 20px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            border-top: 1px solid rgba(51, 65, 85, 0.3);
-            padding-top: 15px;
-        }
-
-        /* Footer Links & Navigation */
-        .footer-nav {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin: 25px 0 20px 0;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .footer-nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: color 0.2s ease;
-            cursor: pointer;
-        }
-
-        .footer-nav a:hover {
-            color: var(--accent-green);
-        }
-
-        /* Modals */
         .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(5px);
-            overflow-y: auto;
-            padding: 20px;
+            display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(5px); overflow-y: auto; padding: 20px;
         }
 
         .modal-content {
-            background-color: var(--bg-card);
-            margin: 40px auto;
-            padding: 35px;
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            max-width: 750px;
-            position: relative;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            background-color: var(--bg-card); margin: 40px auto; padding: 35px;
+            border: 1px solid var(--border-color); border-radius: 16px; max-width: 750px;
+            position: relative; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
         }
 
-        .close-modal {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            color: var(--text-muted);
-            cursor: pointer;
-            line-height: 1;
-        }
+        .close-modal { position: absolute; right: 20px; top: 20px; font-size: 28px; font-weight: bold; color: var(--text-muted); cursor: pointer; line-height: 1; }
+        .close-modal:hover { color: #ffffff; }
+        .modal-body { max-height: 70vh; overflow-y: auto; padding-right: 10px; margin-top: 15px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+        .modal-body h3 { color: #ffffff; margin: 20px 0 10px 0; font-size: 1.15rem; }
+        .modal-body p { margin-bottom: 12px; }
 
-        .close-modal:hover {
-            color: #ffffff;
-        }
+        .form-group { margin-bottom: 18px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 6px; font-size: 0.9rem; color: var(--text-main); font-weight: 600; }
+        .form-control { width: 100%; padding: 12px 15px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; color: #ffffff; font-size: 0.95rem; outline: none; }
+        .form-control:focus { border-color: var(--accent-green); }
 
-        .modal-body {
-            max-height: 70vh;
-            overflow-y: auto;
-            padding-right: 10px;
-            margin-top: 15px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
+        footer { padding: 50px 0 30px 0; background: #060911; font-size: 0.85rem; color: var(--text-muted); text-align: center; }
+        footer p { margin-bottom: 15px; line-height: 1.6; }
+        .disclaimer-text { font-size: 0.78rem; color: #64748b; max-width: 900px; margin: 0 auto; text-align: justify; }
 
-        .modal-body h3 {
-            color: #ffffff;
-            margin: 20px 0 10px 0;
-            font-size: 1.15rem;
-        }
-
-        .modal-body p {
-            margin-bottom: 12px;
-        }
-
-        .modal-body ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        /* Contact Form */
-        .form-group {
-            margin-bottom: 18px;
-            text-align: left;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 6px;
-            font-size: 0.9rem;
-            color: var(--text-main);
-            font-weight: 600;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: #ffffff;
-            font-size: 0.95rem;
-            outline: none;
-        }
-
-        .form-control:focus {
-            border-color: var(--accent-green);
-        }
-
-        /* Footer */
-        footer {
-            padding: 50px 0 30px 0;
-            background: #060911;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-align: center;
-        }
-
-        footer p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .disclaimer-text {
-            font-size: 0.78rem;
-            color: #64748b;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: justify;
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .hero p.sub-headline { font-size: 1.05rem; }
@@ -801,6 +474,8 @@
             .new-price { font-size: 2.8rem; }
             section { padding: 60px 0; }
             .modal-content { padding: 25px 20px; }
+            .download-item-row { flex-direction: column; align-items: flex-start; }
+            .btn-server-dl { width: 100%; text-align: center; }
         }
     </style>
 </head>
@@ -828,7 +503,7 @@
                 <a href="https://rzp.io/rzp/EiokeS11" target="_blank" rel="noopener noreferrer" class="cta-btn">ई-बुक तुरंत डाउनलोड करें (PDF) ➔</a>
                 <div class="cta-subtext">
                     <span>⚡ इंस्टेंट एक्सेस</span>
-                    <span>🔒 सुरक्षित 256-Bit पेमेंट</span>
+                    <span>🔒 लाइव Razorpay सर्वर वेरिफिकेशन</span>
                     <span>📄 रेडी-टू-यूज टूलकिट शामिल</span>
                 </div>
 
@@ -917,7 +592,6 @@
                 </div>
 
                 <div class="module-grid">
-                    <!-- Module 1 -->
                     <div class="module-card">
                         <span class="module-tag">मॉड्यूल 1</span>
                         <h3>इन्वेस्टर साइकोलॉजी और मिस्टर मार्केट</h3>
@@ -929,7 +603,6 @@
                         </ul>
                     </div>
 
-                    <!-- Module 2 -->
                     <div class="module-card">
                         <span class="module-tag">मॉड्यूल 2</span>
                         <h3>इंट्रिन्सिक वैल्यू और 'मार्जिन ऑफ सेफ्टी'</h3>
@@ -941,7 +614,6 @@
                         </ul>
                     </div>
 
-                    <!-- Module 3 -->
                     <div class="module-card">
                         <span class="module-tag">मॉड्यूल 3</span>
                         <h3>इकोनॉमिक मोएट और कैश फ्लो का सच</h3>
@@ -953,7 +625,6 @@
                         </ul>
                     </div>
 
-                    <!-- Module 4 -->
                     <div class="module-card">
                         <span class="module-tag">मॉड्यूल 4</span>
                         <h3>70:30 कोर और सैटेलाइट पोर्टफोलियो</h3>
@@ -965,7 +636,6 @@
                         </ul>
                     </div>
 
-                    <!-- Module 5 -->
                     <div class="module-card">
                         <span class="module-tag">मॉड्यूल 5</span>
                         <h3>प्रॉफिट बुकिंग और 3R एग्जिट फ्रेमवर्क</h3>
@@ -977,7 +647,6 @@
                         </ul>
                     </div>
 
-                    <!-- Module 6 -->
                     <div class="module-card">
                         <span class="module-tag">विशेष अध्याय</span>
                         <h3>इंडियन टैक्स और चार्जेंस का पूरा सच</h3>
@@ -1091,7 +760,7 @@
                     <a href="https://rzp.io/rzp/EiokeS11" target="_blank" rel="noopener noreferrer" class="cta-btn" style="max-width: 100%;">ई-बुक तुरंत डाउनलोड करें ➔</a>
                     <div class="cta-subtext">
                         <span>🔒 100% सुरक्षित पेमेंट</span>
-                        <span>📥 तुरंत डाउनलोड एक्सेस</span>
+                        <span>📥 लाइव Razorpay सर्वर वेरिफिकेशन</span>
                     </div>
                 </div>
 
@@ -1118,7 +787,7 @@
                     <details class="faq-item" open>
                         <summary>मुझे ई-बुक का एक्सेस कैसे मिलेगा?</summary>
                         <div class="faq-content">
-                            पेमेंट पूरा होते ही आपको तुरंत डाउनलोड स्क्रीन पर रीडायरेक्ट कर दिया जाएगा (या आप ऊपर दिए गए "पहले पेमेंट कर चुके हैं? डाउनलोड करें" बटन पर अपना Payment ID और Access PIN डालकर PDF डाउनलोड कर सकते हैं)।
+                            पेमेंट पूरा होते ही Razorpay आपको सीधे हमारी लाइव वेरिफिकेशन स्क्रीन पर भेज देगा, जहाँ आपका वास्तविक <strong>Razorpay Payment ID</strong> वेरिफाई होते ही तुरंत डाउनलोड बटन खुल जाएगा।
                         </div>
                     </details>
 
@@ -1147,30 +816,25 @@
         </section>
     </div>
 
-    <!-- ================= VIEW 2: SECURE PAYMENT VERIFICATION GATE ================= -->
+    <!-- ================= VIEW 2: LIVE RAZORPAY SERVER VERIFICATION ================= -->
     <div id="verify-view" class="hidden">
         <div class="container">
             <div class="vault-box">
                 <div style="font-size: 2.5rem; margin-bottom: 10px;">🔒</div>
-                <h2 style="font-size: 1.5rem; margin-bottom: 8px;">पेमेंट वेरिफिकेशन (Security Lock)</h2>
+                <h2 style="font-size: 1.5rem; margin-bottom: 8px;">लाइव Razorpay पेमेंट वेरिफिकेशन</h2>
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 22px;">
-                    ई-बुक डाउनलोड करने के लिए अपना <strong>Razorpay Payment ID</strong> और <strong>Access PIN</strong> दर्ज करें।
+                    अपनी पेमेंट रसीद (SMS या ईमेल) में मिला वास्तविक <strong>Razorpay Payment ID</strong> दर्ज करें। हमारा सर्वर आपके पेमेंट की पुष्टि करके तुरंत डाउनलोड लिंक देगा।
                 </p>
 
                 <div class="form-group">
-                    <label>Razorpay Payment ID (उदाहरण: pay_P9x8k2...)</label>
+                    <label for="pay-id-input">Razorpay Payment ID (उदाहरण: pay_P9x8k2...)</label>
                     <input type="text" id="pay-id-input" class="form-control" placeholder="pay_XXXXXXXXXXXXXX">
-                </div>
-
-                <div class="form-group">
-                    <label>Secret Access PIN (पेमेंट रसीद में दिया गया कोड)</label>
-                    <input type="password" id="pin-input" class="form-control" placeholder="Access PIN दर्ज करें">
                 </div>
 
                 <div id="vault-error-msg" class="vault-error hidden"></div>
 
-                <button type="button" class="cta-btn" style="max-width: 100%; padding: 14px; font-size: 1.05rem; margin-bottom: 15px;" onclick="verifyPaymentAndUnlock()">
-                    Verify &amp; Unlock PDF ➔
+                <button type="button" id="verify-server-btn" class="cta-btn" style="max-width: 100%; padding: 14px; font-size: 1.05rem; margin-bottom: 15px;" onclick="verifyWithRazorpayServer()">
+                    सर्वर पर पेमेंट वेरिफाई करें ➔
                 </button>
 
                 <button type="button" onclick="backToLanding()" style="background: none; border: none; color: var(--text-muted); text-decoration: underline; cursor: pointer; font-size: 0.88rem;">
@@ -1185,11 +849,13 @@
         <div class="container">
             <div class="vault-box">
                 <div style="font-size: 3rem; margin-bottom: 10px;">🎉</div>
-                <span class="badge" style="margin-bottom: 10px;">ऑर्डर सफल रहा! (Payment Verified)</span>
-                <h2 style="font-size: 1.6rem; margin-bottom: 10px;">बधाई हो! आपकी वेल्थ यात्रा शुरू हो चुकी है</h2>
+                <span class="badge" style="margin-bottom: 10px;">Server Verified Payment</span>
+                <h2 id="unlocked-title" style="font-size: 1.55rem; margin-bottom: 10px;">बधाई हो! आपकी वेल्थ यात्रा शुरू हो चुकी है</h2>
                 <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 20px;">
-                    <strong>The Intelligent Wealth Blueprint (Master Investor Edition PDF)</strong> नीचे दिए गए बटन से अपने डिवाइस में सुरक्षित सेव करें।
+                    नीचे दिए गए सुरक्षित बटन पर क्लिक करके अपनी PDF फाइल डिवाइस में सेव करें।
                 </p>
+
+                <div id="server-files-container"></div>
 
                 <ul class="vault-bonus-list">
                     <li><span style="color: var(--accent-gold);">★</span> 10-पॉइंट स्टॉक स्क्रीनिंग स्कोरकार्ड शामिल है</li>
@@ -1197,11 +863,6 @@
                     <li><span style="color: var(--accent-gold);">★</span> इन्वेस्टर जर्नल टेम्पलेट व 70:30 रीबैलेंसिंग वर्कशीट शामिल है</li>
                 </ul>
 
-                <button type="button" class="cta-btn" style="max-width: 100%; margin-bottom: 18px;" onclick="downloadVerifiedPdf()">
-                    📥 तुरंत डाउनलोड करें (Download PDF)
-                </button>
-
-                <br>
                 <button type="button" onclick="backToLanding()" style="background: none; border: none; color: var(--text-muted); text-decoration: underline; cursor: pointer; font-size: 0.88rem;">
                     ← वापस मुख्य पेज पर जाएं
                 </button>
@@ -1227,66 +888,46 @@
         </div>
     </footer>
 
-    <!-- Privacy Policy Modal -->
+    <!-- Modals -->
     <div id="privacyModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('privacyModal')">&times;</span>
             <h2>Privacy Policy (गोपनीयता नीति)</h2>
             <div class="modal-body">
-                <p>ExtrasalaryDotcom पर हम आपकी गोपनीयता का पूरा सम्मान करते हैं। यह प्राइवेसी पॉलिसी बताती है कि जब आप हमारी वेबसाइट और डिजिटल प्रोडक्ट्स का उपयोग करते हैं, तो हम आपकी जानकारी को कैसे सुरक्षित रखते हैं।</p>
-                <h3>1. एकत्रित की जाने वाली जानकारी</h3>
-                <p>जब आप हमारी ई-बुक खरीदते हैं, तो हम केवल आवश्यक बुनियादी जानकारी जैसे आपका नाम, ईमेल आईडी और संपर्क विवरण एकत्रित करते हैं ताकि आपको डिजिटल प्रोडक्ट डिलीवर किया जा सके।</p>
-                <h3>2. डेटा सुरक्षा</h3>
-                <p>आपकी भुगतान जानकारी (Payment Data) पूरी तरह से सुरक्षित 256-Bit एन्क्रिप्टेड पेमेंट गेटवे द्वारा प्रोसेस की जाती है। हम आपकी कोई भी बैंकिंग या कार्ड जानकारी हमारे सर्वर पर स्टोर नहीं करते।</p>
-                <h3>3. डेटा शेयरिंग</h3>
-                <p>हम आपकी व्यक्तिगत जानकारी किसी भी तीसरे पक्ष (Third Party) को न तो बेचते हैं और न ही किराए पर देते हैं।</p>
+                <p>ExtrasalaryDotcom पर हम आपकी गोपनीयता का पूरा सम्मान करते हैं। आपकी भुगतान जानकारी पूरी तरह से सुरक्षित 256-Bit एन्क्रिप्टेड पेमेंट गेटवे (Razorpay) द्वारा प्रोसेस की जाती है।</p>
             </div>
         </div>
     </div>
 
-    <!-- Terms and Conditions Modal -->
     <div id="termsModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('termsModal')">&times;</span>
             <h2>Terms &amp; Conditions (नियम और शर्तें)</h2>
             <div class="modal-body">
-                <p>इस वेबसाइट या ई-बुक का उपयोग करने से पहले कृपया निम्नलिखित नियमों और शर्तों को ध्यानपूर्वक पढ़ें:</p>
-                <h3>1. बौद्धिक संपदा (Intellectual Property)</h3>
-                <p>The Intelligent Wealth Blueprint ई-बुक और इसकी संपूर्ण सामग्री ExtrasalaryDotcom की कॉपीराइट सामग्री है। इसे बिना लिखित अनुमति के पुनः बेचना, सार्वजनिक रूप से साझा करना, टेलीग्राम या सोशल मीडिया पर वितरित करना कानूनी रूप से प्रतिबंधित है।</p>
-                <h3>2. केवल शैक्षिक उद्देश्य (Educational Purpose Only)</h3>
-                <p>इस गाइड में दी गई सभी केस स्टडीज, रणनीतियां और फॉर्मूले केवल शैक्षिक और वित्तीय साक्षरता के उद्देश्य से हैं। यह कोई प्रत्यक्ष खरीद/बिक्री की सलाह (Buy/Sell Recommendation) नहीं है।</p>
-                <h3>3. वित्तीय निर्णय और जोखिम</h3>
-                <p>शेयर बाजार में निवेश बाजार जोखिमों के अधीन है। किसी भी वित्तीय लाभ या हानि के लिए पाठक स्वयं जिम्मेदार होंगे।</p>
+                <p>The Intelligent Wealth Blueprint ई-बुक ExtrasalaryDotcom की कॉपीराइट सामग्री है। इसे बिना अनुमति के पुनः बेचना या टेलीग्राम पर वितरित करना प्रतिबंधित है। यह सामग्री केवल शैक्षिक उद्देश्य के लिए है।</p>
             </div>
         </div>
     </div>
 
-    <!-- Refund Policy Modal -->
     <div id="refundModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('refundModal')">&times;</span>
             <h2>Refund Policy (रिफंड नीति)</h2>
             <div class="modal-body">
-                <p>हमारे डिजिटल उत्पादों के लिए हमारी रिफंड और कैंसलेशन नीति स्पष्ट और पारदर्शी है:</p>
-                <h3>1. डिजिटल डाउनलोड्स की प्रकृति</h3>
-                <p>चूंकि "The Intelligent Wealth Blueprint" एक तुरंत डाउनलोड करने योग्य डिजिटल उत्पाद (PDF &amp; E-Book) है जिसे पेमेंट के तुरंत बाद एक्सेस किया जा सकता है, इसलिए सामान्यतः खरीदारी के बाद <strong>रिफंड उपलब्ध नहीं है</strong>।</p>
-                <h3>2. तकनीकी समस्याएं</h3>
-                <p>यदि पेमेंट कटने के बाद भी आपको ई-बुक का डाउनलोड लिंक या ईमेल प्राप्त नहीं होता है, तो कृपया अपने पेमेंट ट्रांजैक्शन आईडी के साथ हमें संपर्क करें। हमारी टीम 24 घंटे के भीतर आपको फाइल मैन्युअली ईमेल पर उपलब्ध कराएगी।</p>
+                <p>चूंकि यह एक तुरंत डाउनलोड होने योग्य डिजिटल PDF उत्पाद है, इसलिए खरीदारी के बाद रिफंड उपलब्ध नहीं है। किसी भी तकनीकी समस्या के लिए ईमेल करें: <strong>supportextrasalarydotcom@gmail.com</strong></p>
             </div>
         </div>
     </div>
 
-    <!-- Contact Us Modal -->
     <div id="contactModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('contactModal')">&times;</span>
             <h2>Contact Us (संपर्क करें)</h2>
             <div class="modal-body">
-                <p>यदि आपके पास ई-बुक, पेमेंट या एक्सेस से संबंधित कोई प्रश्न है, तो आप नीचे दिए गए विवरण या फॉर्म के माध्यम से हमसे संपर्क कर सकते हैं:</p>
-                <p style="margin: 15px 0;"><strong>📧 ईमेल:</strong> supportextrasalarydot@gmail.com</p>
+                <p style="margin: 15px 0;"><strong>📧 ईमेल:</strong> supportextrasalarydotcom@gmail.com</p>
                 <p style="margin: 15px 0;"><strong>🌐 वेबसाइट:</strong> https://extrasalarydotcom.blogspot.com/</p>
 
-                <form onsubmit="event.preventDefault(); alert('धन्यवाद! आपका संदेश प्राप्त हो गया है। हम जल्द ही आपसे संपर्क करेंगे।'); closeModal('contactModal');" style="margin-top: 25px;">
+                <form onsubmit="event.preventDefault(); alert('धन्यवाद! आपका संदेश प्राप्त हो गया है।'); closeModal('contactModal');" style="margin-top: 20px;">
                     <div class="form-group">
                         <label>आपका नाम</label>
                         <input type="text" class="form-control" placeholder="अपना पूरा नाम दर्ज करें" required>
@@ -1296,8 +937,8 @@
                         <input type="email" class="form-control" placeholder="name@example.com" required>
                     </div>
                     <div class="form-group">
-                        <label>आपका संदेश / प्रश्न</label>
-                        <textarea class="form-control" rows="4" placeholder="अपना प्रश्न यहाँ लिखें..." required></textarea>
+                        <label>आपका संदेश</label>
+                        <textarea class="form-control" rows="3" placeholder="अपना प्रश्न यहाँ लिखें..." required></textarea>
                     </div>
                     <button type="submit" class="cta-btn" style="max-width: 100%; padding: 12px; font-size: 1rem;">संदेश भेजें</button>
                 </form>
@@ -1305,37 +946,13 @@
         </div>
     </div>
 
-    <!-- ================= ULTRA-SECURE CONTROLLER & ANTI-THEFT SHIELD ================= -->
+    <!-- ================= SERVER-CONNECTED VERIFICATION & SECURITY SCRIPT ================= -->
     <script>
         (function() {
             "use strict";
 
-            // 1. एन्क्रिप्टेड Access PIN (Plaintext PIN कहीं नहीं लिखा है)
-            // वर्तमान एन्कोडेड PIN: ES2026
-            const PIN_SIGNATURE = [496, 594, 363, 349, 363, 391];
-
-            // आपकी The Intelligent Wealth Blueprint PDF की असली रिवर्सड Google Drive ID
-            const REVERSED_DRIVE_ID = "Il6GECSKLNrUkx_YUhttGz4_v9RrNjE1";
-
-            let isSessionVerified = false;
-            let failedCount = 0;
-            let lockoutEndTime = 0;
-
-            function checkPin(raw) {
-                if (!raw || raw.length !== PIN_SIGNATURE.length) return false;
-                for (let i = 0; i < raw.length; i++) {
-                    if ((raw.charCodeAt(i) * 7 + 13) !== PIN_SIGNATURE[i]) return false;
-                }
-                return true;
-            }
-
-            function buildDriveDownloadUrl() {
-                const proto = "//:sptth".split("").reverse().join("");
-                const host = "moc.elgoog.evird".split("").reverse().join("");
-                const path = "=di&daolnwod=tropxe?cu/".split("").reverse().join("");
-                const id = REVERSED_DRIVE_ID.split("").reverse().join("");
-                return proto + host + path + id;
-            }
+            // यहाँ अपना Google Apps Script Web App URL पेस्ट करें
+            const BACKEND_VERIFY_API = "https://script.google.com/macros/s/YOUR_APPS_SCRIPT_DEPLOYMENT_ID/exec";
 
             window.showVerifyView = function() {
                 document.getElementById('landing-view').classList.add('hidden');
@@ -1351,161 +968,120 @@
                 history.replaceState(null, "", window.location.pathname);
             };
 
-            window.verifyPaymentAndUnlock = function() {
+            window.verifyWithRazorpayServer = async function(autoPayId) {
                 const errEl = document.getElementById('vault-error-msg');
-                const now = Date.now();
+                const btn = document.getElementById('verify-server-btn');
+                const inputEl = document.getElementById('pay-id-input');
+                const payId = (autoPayId || inputEl.value).trim();
 
-                if (now < lockoutEndTime) {
-                    const sec = Math.ceil((lockoutEndTime - now) / 1000);
-                    errEl.textContent = `⏳ बहुत अधिक गलत प्रयास! कृपया ${sec} सेकंड बाद पुनः प्रयास करें।`;
+                if (!/^pay_[A-Za-z0-9]{10,25}$/.test(payId)) {
+                    errEl.textContent = "❌ कृपया सही Razorpay Payment ID दर्ज करें (उदाहरण: pay_P9x8k2...)।";
                     errEl.classList.remove('hidden');
                     return;
                 }
 
-                const payId = document.getElementById('pay-id-input').value.trim();
-                const pin = document.getElementById('pin-input').value.trim();
-                const payRegex = /^pay_[A-Za-z0-9]{10,20}$/;
+                errEl.classList.add('hidden');
+                btn.disabled = true;
+                btn.textContent = "⏳ Razorpay सर्वर से जांच हो रही है...";
 
-                if (payRegex.test(payId) && checkPin(pin)) {
-                    failedCount = 0;
-                    errEl.classList.add('hidden');
-                    isSessionVerified = true;
-                    sessionStorage.setItem("es_wealth_verified", "1");
-                    unlockDownloadView();
-                } else {
-                    failedCount++;
-                    if (failedCount >= 3) {
-                        lockoutEndTime = Date.now() + 60000;
-                        errEl.textContent = "🔒 सुरक्षा लॉक: 3 गलत प्रयासों के कारण 60 सेकंड के लिए ब्लॉक किया गया।";
+                try {
+                    // product=wealth भेजकर सर्वर से केवल इसी ई-बुक के लिए वेरिफिकेशन मांगना
+                    const queryUrl = BACKEND_VERIFY_API + "?product=wealth&pay_id=" + encodeURIComponent(payId);
+                    const response = await fetch(queryUrl);
+                    const result = await response.json();
+
+                    if (result.success && result.files) {
+                        renderVerifiedFiles(result.tierName, result.files);
                     } else {
-                        errEl.textContent = `❌ अमान्य Payment ID या Access PIN! (शेष प्रयास: ${3 - failedCount})`;
+                        errEl.textContent = result.message || "❌ पेमेंट वेरिफाई नहीं हो सका।";
+                        errEl.classList.remove('hidden');
                     }
+                } catch (err) {
+                    errEl.textContent = "⚠️ नेटवर्क त्रुटि: सर्वर से संपर्क नहीं हो पाया। कृपया पुनः प्रयास करें।";
                     errEl.classList.remove('hidden');
+                } finally {
+                    btn.disabled = false;
+                    btn.textContent = "सर्वर पर पेमेंट वेरिफाई करें ➔";
                 }
             };
 
-            function unlockDownloadView() {
+            function renderVerifiedFiles(title, files) {
+                document.getElementById('unlocked-title').textContent = title;
+                const container = document.getElementById('server-files-container');
+                container.innerHTML = "";
+
+                files.forEach(file => {
+                    const row = document.createElement('div');
+                    row.className = 'download-item-row';
+                    row.innerHTML = `
+                        <div>
+                            <div style="font-size: 0.98rem; font-weight: 700; color: #fff; margin-bottom: 4px;">${file.name}</div>
+                            <div style="font-size: 0.8rem; color: var(--text-muted);">${file.desc}</div>
+                        </div>
+                        <a href="${file.url}" target="_blank" rel="noopener noreferrer" class="btn-server-dl">${file.btnText}</a>
+                    `;
+                    container.appendChild(row);
+                });
+
                 document.getElementById('landing-view').classList.add('hidden');
                 document.getElementById('verify-view').classList.add('hidden');
                 document.getElementById('download-view').classList.remove('hidden');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
 
-            window.downloadVerifiedPdf = function() {
-                if (!isSessionVerified && sessionStorage.getItem("es_wealth_verified") !== "1") {
-                    alert("⚠️ अनधिकृत एक्सेस! कृपया पहले अपना पेमेंट वेरिफाई करें।");
-                    showVerifyView();
-                    return;
-                }
-                const url = buildDriveDownloadUrl();
-                const a = document.createElement('a');
-                a.href = url;
-                a.target = "_blank";
-                a.rel = "noopener noreferrer";
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-            };
-
-            // Razorpay Redirect Auto-Verification
-            (function autoCheckRedirect() {
-                const params = new URLSearchParams(window.location.search);
-                const payId = params.get('razorpay_payment_id') || params.get('payment_id') || "";
-                const pin = params.get('pin') || "";
-                const payRegex = /^pay_[A-Za-z0-9]{10,20}$/;
-
-                if (payRegex.test(payId) && checkPin(pin)) {
-                    isSessionVerified = true;
-                    sessionStorage.setItem("es_wealth_verified", "1");
-                    unlockDownloadView();
-                }
-            })();
+            // Razorpay पेमेंट के बाद ऑटोमैटिक वेरिफिकेशन
+            const urlParams = new URLSearchParams(window.location.search);
+            const returnedPayId = urlParams.get('razorpay_payment_id') || urlParams.get('payment_id');
+            if (returnedPayId) {
+                document.getElementById('pay-id-input').value = returnedPayId;
+                showVerifyView();
+                verifyWithRazorpayServer(returnedPayId);
+            }
 
             // Modals
-            window.openModal = function(modalId) {
-                document.getElementById(modalId).style.display = "block";
+            window.openModal = id => {
+                document.getElementById(id).style.display = "block";
                 document.body.style.overflow = "hidden";
             };
-
-            window.closeModal = function(modalId) {
-                document.getElementById(modalId).style.display = "none";
+            window.closeModal = id => {
+                document.getElementById(id).style.display = "none";
                 document.body.style.overflow = "auto";
             };
-
-            window.onclick = function(event) {
-                const modals = document.querySelectorAll('.modal');
-                modals.forEach(modal => {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
+            window.onclick = e => {
+                document.querySelectorAll('.modal').forEach(m => {
+                    if (e.target === m) {
+                        m.style.display = "none";
                         document.body.style.overflow = "auto";
                     }
                 });
             };
 
-            // ================= FULL ANTI-THEFT & DEVTOOLS SHIELD =================
-            document.addEventListener('contextmenu', function(e) {
-                if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
-                    e.preventDefault();
-                    return false;
-                }
+            // Full Anti-Theft Shield
+            document.addEventListener('contextmenu', e => {
+                if (!['INPUT', 'TEXTAREA'].includes(e.target.tagName)) e.preventDefault();
             });
-
-            document.addEventListener('copy', function(e) {
-                if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
+            document.addEventListener('copy', e => {
+                if (!['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
                     if (e.clipboardData) e.clipboardData.setData('text/plain', '');
                     e.preventDefault();
-                    return false;
                 }
             });
-
-            document.addEventListener('cut', function(e) {
-                if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
-                    e.preventDefault();
-                    return false;
-                }
+            document.addEventListener('dragstart', e => {
+                if (!['INPUT', 'TEXTAREA'].includes(e.target.tagName)) e.preventDefault();
             });
-
-            document.addEventListener('dragstart', function(e) {
-                if (!['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName)) {
-                    e.preventDefault();
-                    return false;
+            document.addEventListener('keydown', e => {
+                const isField = ['INPUT', 'TEXTAREA'].includes(e.target.tagName);
+                if (e.key === 'F12' || e.keyCode === 123) { e.preventDefault(); return false; }
+                if ((e.ctrlKey || e.metaKey) && e.shiftKey && ['i', 'j', 'c', 'k'].includes(e.key.toLowerCase())) {
+                    e.preventDefault(); return false;
                 }
-            });
-
-            document.addEventListener('keydown', function(e) {
-                const isInput = ['INPUT', 'TEXTAREA', 'SELECT'].includes(e.target.tagName);
-
-                if (e.key === 'F12' || e.keyCode === 123) {
-                    e.preventDefault();
-                    return false;
-                }
-
-                if ((e.ctrlKey || e.metaKey) && e.shiftKey) {
-                    const k = e.key.toLowerCase();
-                    if (['i', 'j', 'c', 'k'].includes(k)) {
-                        e.preventDefault();
-                        return false;
-                    }
-                }
-
                 if ((e.ctrlKey || e.metaKey) && ['u', 's', 'p'].includes(e.key.toLowerCase())) {
-                    e.preventDefault();
-                    return false;
+                    e.preventDefault(); return false;
                 }
-
-                if ((e.ctrlKey || e.metaKey) && ['a', 'c', 'x'].includes(e.key.toLowerCase()) && !isInput) {
-                    e.preventDefault();
-                    return false;
+                if ((e.ctrlKey || e.metaKey) && ['a', 'c', 'x'].includes(e.key.toLowerCase()) && !isField) {
+                    e.preventDefault(); return false;
                 }
             });
-
-            setInterval(function() {
-                const t0 = performance.now();
-                (function() { return false; }['constructor']('debugger')['call']());
-                if (performance.now() - t0 > 120) {
-                    document.body.innerHTML = "<div style='background:#0b0f19;color:#ef4444;height:100vh;display:flex;align-items:center;justify-content:center;font-family:sans-serif;text-align:center;padding:20px;'><h2>⚠️ Security Alert: Developer Tools are restricted on this protected page.</h2></div>";
-                }
-            }, 2000);
         })();
     </script>
 </body>
